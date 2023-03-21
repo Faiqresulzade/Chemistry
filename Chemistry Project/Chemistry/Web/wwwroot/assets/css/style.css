@@ -1,0 +1,120 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+/* Teacher section started */
+#teacher{
+    background-color: #f1f0fe;
+    position: relative;
+    padding: 0px;
+    margin-top: 130px;
+}
+.teacher-information{
+    margin-top: -40px;
+    margin-bottom: -40px;
+    border-radius: 40px;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+.teacher img{
+    border-radius: 25px 35px;
+    width: 100%;
+}
+.teacher
+{
+    padding: 50px 50px 50px 60px;
+}
+.info-name{
+    padding: 55px;
+    background-color: #7a6ad8;
+    border-radius: 50px 30px;
+    text-align: center;
+}
+.name h2{ 
+    color: #ffffff;
+}
+.info p{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;
+    padding-top: 10px;
+    color: #ffffff;
+}
+/* Teacher section ended */
+/* Events section started */
+.item-description { 
+    text-align: end;
+}
+/* Events section ended */
+/* Login started */
+
+.open .line1 {
+    /*transform: rotate(45deg) translate(10px, 0px);*/
+    transform: translateY(5px) rotate(-45deg);
+  }
+  #sign-out-btn{
+    display: none;
+  }
+  
+  .open .line2 {
+    /*transform: rotate(-45deg) translate(7px, 3px);*/
+    transform: translateY(-5px) rotate(45deg);
+  }
+  
+  .expansionMenu {
+    background-color: var(--global-navbar-color-primary);
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0.5%;
+    width: 100%;
+    height: 0%;
+    transition: 400ms ease-in-out height;
+    z-index: 9999;
+  }
+  
+  .searchBar_Container {
+    display: block;
+    position: fixed;
+    z-index: 4;
+    top: 48px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 0.2rem;
+   
+  }
+  
+  #signin-btn,
+  #sign-out-btn{   
+       color: rgb(0, 0, 0);
+      font-size: 35px;
+      padding-top: 5px;
+      padding-right: 10px;
+      cursor: pointer;
+     
+  }
+  
+  #signin-btn:hover,
+  #sign-out-btn:hover{
+      
+    opacity: 1;
+  }
+  
+
+.bg-img-top{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-149px);
+    opacity: 0.5;
+    top: 0;
+    width: 318px;
+    height: 119px;
+    content: '';
+    z-index: 96;
+}
+/* Login Ended */

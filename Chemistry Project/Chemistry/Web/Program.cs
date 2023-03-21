@@ -3,6 +3,8 @@ using DataAcces.Context;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Microsoft.EntityFrameworkCore;
+using Web.Services.Abstract;
+using Web.Services.Concret;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -22,6 +24,18 @@ builder.Services.AddIdentity<User, IdentityRole>(options =>
     options.Password.RequireLowercase = false;
 })
     .AddEntityFrameworkStores<AppDbContext>();
+
+#region Repositories
+
+
+#endregion
+
+
+#region Services
+builder.Services.AddScoped<IPersonInfoService, PersonInfoService>();
+
+#endregion
+
 
 var app = builder.Build();
 

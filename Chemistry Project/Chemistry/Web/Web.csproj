@@ -19,4 +19,8 @@
     <ProjectReference Include="..\DataAcces\DataAcces.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Areas\" />
+  </ItemGroup>
+
 </Project>
