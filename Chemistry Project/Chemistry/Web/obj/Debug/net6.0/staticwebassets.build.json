@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ayYki9X0D5Ef/mFVkg6DyOqv9Bt4xso6a9DRPV5e2u4=",
+  "Hash": "t2P9la02irSJ12pyf5VrvFkiE3xgs5FSpuVLHIZ3cy0=",
   "Source": "Web",
   "BasePath": "_content/Web",
   "Mode": "Default",
@@ -31295,6 +31295,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\images\\2023fd63-958c-48d1-abf2-73fe3b3f032b_nature-photo.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Honor\\Desktop\\chemistry Full\\Chemistry Project\\Chemistry\\Web\\wwwroot\\assets\\images\\472e6491-612b-46b7-8695-e92a9dbe8a5c_nature-photo.jpg",
+      "SourceId": "Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Honor\\Desktop\\chemistry Full\\Chemistry Project\\Chemistry\\Web\\wwwroot\\",
+      "BasePath": "_content/Web",
+      "RelativePath": "assets/images/472e6491-612b-46b7-8695-e92a9dbe8a5c_nature-photo.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\images\\472e6491-612b-46b7-8695-e92a9dbe8a5c_nature-photo.jpg"
     },
     {
       "Identity": "C:\\Users\\Honor\\Desktop\\chemistry Full\\Chemistry Project\\Chemistry\\Web\\wwwroot\\assets\\images\\banner-bg.jpg",

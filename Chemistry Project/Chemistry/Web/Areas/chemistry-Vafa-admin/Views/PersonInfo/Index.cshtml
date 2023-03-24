@@ -20,6 +20,7 @@
                                         <thead>
                                             <tr>
                                                 <th>Id</th>
+                                                <th>Full Name</th>
                                                 <th>Info</th>
                                                 <th>CreateAt</th>
                                                 <th>ModifiedAt</th>
@@ -30,6 +31,7 @@
                                         <tbody>
                                             <tr>
                                                 <td>@Model.personInfo.Id</td>
+                                                <td>@Model.personInfo.Title</td>
                                                <td>@Html.Raw(@Model.personInfo.Text)</td>
                                                 <td>@Model.personInfo.CreateAt</td>
                                                 <td>@Model.personInfo.ModifiedAt</td>
@@ -37,9 +39,8 @@
                                                     <img class="w-50 p-3" src="~/assets/images/@Model.personInfo.Photo?" />
                                                 </td>
                                                 <td>
-                                                    <a class="btn btn-primary" asp-action="details" asp-controller="aboutus" asp-area="admin" asp-route-id="@Model.personInfo.Id">Details</a>
-                                                    <a class="btn btn-danger" asp-action="delete" asp-controller="aboutus" asp-area="admin" asp-route-id="@Model.personInfo.Id">Delete</a>
-                                                    <a class="btn btn-primary" asp-action="update" asp-controller="aboutus" asp-area="admin" asp-route-id="@Model.personInfo.Id">Update</a>
+                                                <a class="btn btn-danger" asp-action="getDelete" asp-controller="personinfo" asp-area="chemistry-Vafa-admin" asp-route-id="@Model.personInfo.Id">Delete</a>
+                                                    <a class="btn btn-primary" asp-action="update" asp-controller="personinfo" asp-area="chemistry-Vafa-admin" asp-route-id="@Model.personInfo.Id">Update</a>
                                                 </td>
                                             </tr>
                                         </tbody>

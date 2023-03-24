@@ -23,8 +23,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcY2hlbWlzdHJ5LVZhZmEtYWRtaW5cVmlld3NcUGVyc29uSW5mb1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Honor/Desktop/chemistry Full/Chemistry Project/Chemistry/Web/Areas/chemistry-Vafa-admin/Views/PersonInfo/GetDelete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcY2hlbWlzdHJ5LVZhZmEtYWRtaW5cVmlld3NcUGVyc29uSW5mb1xHZXREZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Honor/Desktop/chemistry Full/Chemistry Project/Chemistry/Web/Areas/chemistry-Vafa-admin/Views/PersonInfo/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcY2hlbWlzdHJ5LVZhZmEtYWRtaW5cVmlld3NcUGVyc29uSW5mb1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Honor/Desktop/chemistry Full/Chemistry Project/Chemistry/Web/Areas/chemistry-Vafa-admin/Views/PersonInfo/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcY2hlbWlzdHJ5LVZhZmEtYWRtaW5cVmlld3NcUGVyc29uSW5mb1xVcGRhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Honor/Desktop/chemistry Full/Chemistry Project/Chemistry/Web/Areas/chemistry-Vafa-admin/Views/Shared/_layout.cshtml]

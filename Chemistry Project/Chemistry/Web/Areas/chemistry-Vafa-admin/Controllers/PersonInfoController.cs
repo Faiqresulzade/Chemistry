@@ -14,10 +14,11 @@ namespace Web.Areas.chemistry_Vafa_admin.Controllers
         {
             _personInfo = personInfo;
         }
+
+        #region crud
         public async Task<IActionResult> Index()
         {
             var personInfo =await _personInfo.IndexAsync();
-            //if(personInfo != null) return
 
             return View(personInfo);
         }
@@ -35,5 +36,43 @@ namespace Web.Areas.chemistry_Vafa_admin.Controllers
             if (!result) return View(model);
             return RedirectToAction(nameof(Index));
         }
+
+
+        [HttpGet]
+        public async Task<IActionResult> Update(int id)
+        {
+            var personInfo=await _personInfo.GetPersonInfoUpdateAsync(id);
+            if (personInfo == null) return NotFound();
+            return View(personInfo);
+        }
+
+        [HttpPost]
+
+        public async Task<IActionResult>Update(PersonInfoUpdateVM model, int id)
+        {
+            var personInfo = await _personInfo.UpdateAsync(id,model);
+            if (personInfo) return RedirectToAction(nameof(Index));
+
+            return NotFound();
+        }
+
+        [HttpGet]
+
+        public async Task<IActionResult>GetDelete(int id)
+        {
+            var personInfo =await _personInfo.GetDeleteAsync(id);
+            if (personInfo == null) return NotFound();
+            return View(personInfo);
+        }
+        [HttpPost]
+
+        public async Task<IActionResult> DeleteAsync(int id)
+        {
+            bool isExist =await _personInfo.DeleteAsync(id);
+            if(isExist) return RedirectToAction(nameof(Index));
+            return NotFound();
+        }
+
+        #endregion
     }
 }
