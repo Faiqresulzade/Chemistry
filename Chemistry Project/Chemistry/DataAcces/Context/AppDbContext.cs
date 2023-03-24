@@ -16,5 +16,6 @@ namespace DataAcces.Context
 
         }
         public DbSet<PersonInfo> PersonInfo { get; set; }
+        public DbSet<Students> Students { get; set; }
     }
 }

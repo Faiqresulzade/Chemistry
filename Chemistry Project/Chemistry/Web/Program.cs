@@ -1,10 +1,17 @@
 using Core.Entities;
 using DataAcces.Context;
+using DataAcces.Repositories.Abstract;
+using DataAcces.Repositories.Concrete;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Microsoft.EntityFrameworkCore;
 using Web.Services.Abstract;
 using Web.Services.Concret;
+using Web.Areas.chemistry_Vafa_admin.Services.Abstract;
+using Web.Areas.chemistry_Vafa_admin.Services.Concrete;
+using PersonInfoService = Web.Services.Concret.PersonInfoService;
+using IPersonInfoService = Web.Services.Abstract.IPersonInfoService;
+using Core.Utilities;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -26,13 +33,16 @@ builder.Services.AddIdentity<User, IdentityRole>(options =>
     .AddEntityFrameworkStores<AppDbContext>();
 
 #region Repositories
-
+builder.Services.AddScoped<IPersonInfoRepository, PersonInfoRepository>();
+builder.Services.AddScoped<IStudentsRepository, StudentsRepository>();
 
 #endregion
 
 
 #region Services
+builder.Services.AddSingleton<IFileService, FileService>();
 builder.Services.AddScoped<IPersonInfoService, PersonInfoService>();
+builder.Services.AddScoped<Web.Areas.chemistry_Vafa_admin.Services.Abstract.IPersonInfoService, Web.Areas.chemistry_Vafa_admin.Services.Concrete.PersonInfoService>();
 
 #endregion
 
@@ -55,7 +65,12 @@ app.UseRouting();
 app.UseAuthorization();
 
 app.MapControllerRoute(
+    name: "areas",
+    pattern:"{area:exists}/{controller=dashboard}/{action=index}/{id?}"
+    );
+
+app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=home}/{action=index}/{id?}");
 
 app.Run();

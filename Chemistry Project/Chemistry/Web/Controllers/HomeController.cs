@@ -16,8 +16,8 @@ namespace Web.Controllers
         }
         public async Task<IActionResult> Index()
         {
-            var PersonInfo = await _personInfoService.IndexAsync();
-            if(PersonInfo!=null)  return View(PersonInfo);
+            var HomePage = await _personInfoService.IndexAsync();
+            if(HomePage != null)  return View(HomePage);
             return View();
         }
     }

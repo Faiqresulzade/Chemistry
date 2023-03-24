@@ -17,7 +17,9 @@ namespace Web.Services.Concret
         {
             var model = new HomeIndexVM()
             {
-                GetPersonInfo = await _appDbContext.PersonInfo.FirstOrDefaultAsync()
+                GetPersonInfo = await _appDbContext.PersonInfo.FirstOrDefaultAsync(),
+                Students=await _appDbContext.Students.ToListAsync()
+                
             };
             return model;
         }
