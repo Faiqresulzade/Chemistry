@@ -1,0 +1,251 @@
+.graduateSection {
+    overflow-x: hidden;
+    margin: 80px 0;
+    height: 100%;
+
+    article {
+        text-align: center;
+        margin-bottom: 40px;
+
+        h3 {
+            font-size: 30px;
+            color: $black;
+            font-weight: 500;
+        }
+    }
+
+    .graduate-wrapper {
+        .slick-list {
+            padding-top: 80px;
+        }
+
+        .slick-dots {
+            li {
+                button {
+                    @include flex();
+
+                    &:before {
+                        color: $violet;
+                        font-size: 10px;
+                    }
+                }
+            }
+        }
+
+        .graudate-slide {
+            .row {
+                .swiperCard {
+                    height: 100%;
+                    width: 100%;
+                    @include flex();
+
+                    .swiperImage {
+                        @include flex();
+                        position: absolute;
+                        top: -70px;
+
+                        img {
+                            border-radius: 50%;
+                        }
+                    }
+
+                    article {
+                        width: 100%;
+                        border-radius: 25px;
+                        padding: 140px 30px 40px 30px;
+                        text-align: center;
+                        background: $primary-color;
+
+                        span {
+                            color: $violet;
+                            margin: 20px 0;
+                            font-size: 18px;
+                            display: block;
+                        }
+
+                        h4 {
+                            font-size: 22px;
+                            font-weight: 500;
+                            margin: 8px 0 15px;
+                            color: $black;
+                        }
+
+                        ul {
+                            margin: 30px 0;
+
+                            li {
+                                margin: 20px 0;
+                                @include flex();
+
+                                i {
+                                    padding: 10px;
+                                    border-radius: 50%;
+                                    background-color: $white;
+                                    color: $violet;
+                                    margin-right: 20px;
+                                }
+
+                                p {
+                                    color: $black;
+                                    font-size: 20px;
+                                    font-weight: 400;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:1200px) {
+    .graduateSection {
+        margin: 30px 0;
+
+        .graduate-wrapper {
+            .slick-list {
+                padding-top: 80px;
+            }
+
+            .graudate-slide {
+                .row {
+                    .swiperCard {
+
+                        .swiperImage {
+                            @include flex();
+
+                            img {
+                                width: 70%;
+                            }
+                        }
+
+                        article {
+                            padding: 100px 10px 40px 10px;
+
+                            ul {
+
+                                li {
+                                    p {
+                                        font-size: 14px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:992px) {
+    .graduateSection {
+        .graduate-wrapper {
+
+            .graudate-slide {
+                .row {
+                    .swiperCard {
+                        height: 100%;
+                        width: 100%;
+                        @include flex();
+
+                        .swiperImage {
+                            @include flex();
+
+                            img {
+                                width: 80%;
+                            }
+                        }
+
+                        article {
+                            padding: 100px 30px 40px 30px;
+
+                            ul {
+                                li {
+                                    p {
+                                        font-size: 16px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:768px) {
+    .graduateSection {
+        .graduate-wrapper {
+
+            .graudate-slide {
+                .row {
+                    .swiperCard {
+                        height: 100%;
+                        width: 100%;
+                        @include flex();
+
+                        .swiperImage {
+                            @include flex();
+
+                            img {
+                                width: 60%;
+                            }
+                        }
+
+                        article {
+                            padding: 70px 10px 40px 10px;
+
+                            ul {
+                                li {
+                                    p {
+                                        font-size: 14px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:576px) {
+    .graduateSection {
+        .graduate-wrapper {
+
+            .graudate-slide {
+                .row {
+                    .swiperCard {
+                        height: 100%;
+                        width: 100%;
+                        @include flex();
+
+                        .swiperImage {
+                            @include flex();
+
+                            img {
+                                width: 80%;
+                            }
+                        }
+
+                        article {
+                            padding: 150px 30px 40px 30px;
+
+                            ul {
+                                li {
+                                    p {
+                                        font-size: 20px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

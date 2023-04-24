@@ -1,0 +1,194 @@
+.trialSection {
+    padding: 40px 0;
+
+    article {
+        margin-bottom: 20px;
+        text-align: center;
+
+        h2 {
+            font-size: 36px;
+            line-height: 44px;
+            text-transform: capitalize;
+            margin: 20px 0;
+            font-weight: 400;
+            color: $black;
+        }
+
+        .filterCourse {
+            margin-bottom: 30px;
+
+            ul {
+                @include flex();
+
+                li {
+                    button {
+                        background-color: $about-background;
+                        padding: 15px 40px;
+                        list-style: none;
+                        border: none;
+                        cursor: pointer;
+                        font-size: 14px;
+                        transition: .5s;
+                        color: $black;
+
+                        &:hover {
+                            color: $violet;
+                        }
+
+                        &.button-filter-active {
+                            color: $white;
+                            background-color: $violet;
+                        }
+                    }
+
+                    &:first-child {
+                        button {
+                            border-top-left-radius: 50px;
+                            border-bottom-left-radius: 50px;
+                        }
+                    }
+
+                    &:last-child {
+                        button {
+                            border-top-right-radius: 50px;
+                            border-bottom-right-radius: 50px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .row {
+        .course {
+            background: $about-background;
+            border-radius: 50px 50px 20px 20px;
+            margin: 10px 0;
+
+            .courseHeader {
+                position: relative;
+                overflow: hidden;
+                border-radius: 50px;
+
+                img {
+                    width: 100%;
+                    border-radius: 50px;
+                    transition: .6s;
+
+                    &:hover {
+                        transform: scale(1.2);
+                        filter: blur(2px);
+                    }
+                }
+
+                .courseContent {
+                    position: absolute;
+                    left: 30px;
+                    top: 30px;
+                    font-size: 14px;
+                    text-transform: uppercase;
+                    color: $violet;
+                    background-color: $about-background;
+                    padding: 8px 20px;
+                    border-radius: 25px;
+                    font-weight: 500;
+                    display: inline-block;
+                }
+
+                .coursePrice {
+                    position: absolute;
+                    right: -30px;
+                    top: -50px;
+                    background-color: $violet;
+                    width: 130px;
+                    height: 130px;
+                    border-radius: 50%;
+                    @include flex();
+                    transition: all .3s;
+
+                    span {
+                        margin-top: 45px;
+                        margin-right: 30px;
+                        font-size: 28px;
+                        text-transform: uppercase;
+                        color: $white;
+                        font-weight: 700;
+                    }
+                }
+            }
+
+            article {
+                padding: 20px 30px 25px 30px;
+                text-align: start;
+
+                .courseAuthor {
+                    display: block;
+                    color: $violet;
+                    font-size: 15px;
+                    margin-bottom: 6px;
+                }
+
+                .courseKind {
+                    font-size: 22px;
+                    font-weight: 600;
+                    transition: all .3s;
+                    color: $black;
+                    margin-bottom: 20px;
+
+                    &:hover {
+                        color: $violet;
+                    }
+                }
+
+                .buyNow {
+                    text-align: right;
+                    margin: 15px 0;
+
+                    a {
+                        cursor: pointer;
+                        border: 1px solid $violet-rgb;
+                        padding: 10px;
+                        background-color: $violet-rgb;
+                        border-radius: 40px;
+                        color: $white;
+                        transition: 0.4s ease;
+
+                        &:hover {
+                            color: $white;
+                            background-color: $violet;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .viewMore {
+        @include flex();
+
+        a {
+            padding: 10px 20px;
+            background-color: $about-background;
+            color: $violet;
+            border-radius: 20px;
+            font-size: 15px;
+            transition: .5s;
+            @include flex();
+
+            i {
+                display: none;
+                margin-left: 10px;
+            }
+
+            &:hover {
+                background-color: $violet;
+                color: $white;
+
+                i {
+                    display: inline;
+                }
+            }
+        }
+
+    }
+}

@@ -1,0 +1,128 @@
+.lessonPage {
+    padding: 40px 0;
+
+    .filterLesson {
+        margin-bottom: 30px;
+
+        ul {
+            @include flex();
+
+            li {
+                button {
+                    background-color: $about-background;
+                    padding: 15px 40px;
+                    list-style: none;
+                    border: none;
+                    cursor: pointer;
+                    font-size: 14px;
+                    transition: .5s;
+                    color: $black;
+
+                    &:hover {
+                        color: $violet;
+                    }
+
+                    &.button-filter-active {
+                        color: $white;
+                        background-color: $violet;
+                    }
+                }
+
+                &:first-child {
+                    button {
+                        border-top-left-radius: 50px;
+                        border-bottom-left-radius: 50px;
+                    }
+                }
+
+                &:last-child {
+                    button {
+                        border-top-right-radius: 50px;
+                        border-bottom-right-radius: 50px;
+                    }
+                }
+            }
+        }
+    }
+
+    .row {
+        .lesson {
+            background: $about-background;
+            border-radius: 50px 50px 20px 20px;
+            margin: 10px 0;
+
+            .lessonImage {
+                border-radius: 50px;
+                overflow: hidden;
+                img {
+                    width: 100%;
+                    border-radius: 50px;
+                    transition: .6s;
+                   
+                    &:hover {
+                        transform: scale(1.1);
+                        filter: blur(2px);
+                    }
+                }
+
+            }
+
+            article {
+                padding: 35px 30px 35px 30px;
+                text-align: start;
+
+                .lessonKind {
+                    font-size: 22px;
+                    font-weight: 600;
+                    transition: all .3s;
+                    color: $black;
+                    margin-bottom: 20px;
+
+                    &:hover {
+                        color: $violet;
+                    }
+                }
+
+                .detailButton {
+                    display: block;
+                    text-align: center;
+                    padding-top: 20px;
+
+                    a {
+                        cursor: pointer;
+                        border: 1px solid $violet-rgb;
+                        padding: 10px;
+                        background-color: $violet-rgb;
+                        border-radius: 40px;
+                        color: $white;
+                        transition: 0.4s ease;
+
+                        &:hover {
+                            color: $white;
+                            background-color: $violet;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .loadMore {
+        @include flex();
+        margin: 20px 0;
+
+        button {
+            padding: 10px 20px;
+            background-color: $violet;
+            color: $white;
+            border-radius: 20px;
+            font-size: 15px;
+            transition: .5s;
+            @include flex();
+            cursor: pointer;
+            border: none;
+
+        }
+
+    }
+}

@@ -1,0 +1,9 @@
+#preloader{
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 1001;
+    background:#000 url("../../../../assets/media/loading-chemical.gif")center/cover ;
+    background-repeat: no-repeat;
+    background-size: 20%;
+}

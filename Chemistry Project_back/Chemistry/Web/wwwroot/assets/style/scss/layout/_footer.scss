@@ -1,0 +1,91 @@
+.footer {
+    background-color: $violet;
+    padding: 42px 0;
+    position: relative;
+    border-radius: 100px 100px 0 0;
+    @include flex();
+    &::before {
+        background: url(../../../../assets/media/contact-dec-01.png);
+        position: absolute;
+        left: 30px;
+        transform: rotate(180deg);
+        opacity: 1;
+        bottom: 0;
+        width: 318px;
+        height: 119px;
+        content: "";
+        z-index: 2;
+    }
+
+    .row {
+        justify-content: center;
+        .footerContent {
+            @include flex();
+            padding: 30px 0;
+
+            p {
+                font-size: 20px;
+                color: $white;
+            }
+
+            span {
+                margin-left: 20px;
+                font-size: 20px;
+                color: $white;
+
+                a {
+                    color: $rgb-white;
+                    transition: .5s;
+
+                    &:hover {
+                        color: $red;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:576px) {
+    .footer {
+        overflow: hidden;
+        padding: 10px 0;
+        @include flex($align-items:flex-start);
+        text-align: center;
+        &::before {
+            transform: rotate(160deg);
+            background-repeat: no-repeat;
+            left: 10%;
+            width: 200px;
+            height: 119px;
+         
+        }
+    
+        .row {
+            .footerContent {
+                padding: 20px 0;
+                p {
+                    margin: 40px 0;
+                    font-size: 20px;
+                    color: $white;
+                    line-height: 46px;
+                }
+    
+                span {
+                    margin-left: 20px;
+                    font-size: 20px;
+                    color: $white;
+    
+                    a {
+                        color: $rgb-white;
+                        transition: .5s;
+    
+                        &:hover {
+                            color: $red;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

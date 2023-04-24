@@ -1,0 +1,164 @@
+.aboutUs {
+    position: relative;
+    margin: 40px 0;
+
+    &:before {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        z-index: -1;
+        width: 84%;
+        height: 100%;
+        background-color: $about-background;
+        content: '';
+        border-top-left-radius: 500px;
+        border-bottom-left-radius: 500px;
+    }
+
+    .row {
+        align-items: flex-start;
+
+        .teacherImage {
+            padding: 50px 50px 50px 60px;
+
+            img {
+                width: 100%;
+                border-radius: 40px
+            }
+        }
+
+        .infoTeacher {
+            @include flex($align-items:flex-start);
+            padding: 55px;
+            background-color: $violet;
+            border-radius: 50px 30px;
+            text-align: center;
+            height: 800px;
+
+            article {
+                h4 {
+                    font-size: 32px;
+                    color: $white;
+                    margin-bottom: 20px;
+                }
+
+                p {
+                    font-size: 20px;
+                    color: $white;
+                    letter-spacing: 1px;
+                    min-height: 400px;
+                    line-height: 26px;
+                    overflow: hidden;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:1200px) {
+    .aboutUs {
+        .row {
+            .infoTeacher {
+                padding: 45px;
+                min-height: 500px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:992px) {
+    .aboutUs {
+        .row {
+            justify-content: center;
+
+            .teacherImage {
+                padding: 20px;
+
+                img {
+                    max-height: 500px;
+                }
+
+            }
+
+            .infoTeacher {
+                padding: 25px;
+                min-height: 440px;
+
+                article {
+                    h4 {
+                        font-size: 25px;
+                    }
+
+                    p {
+                        max-height: 400px;
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:768px) {
+    .aboutUs {
+
+        .row {
+            justify-content: center;
+
+            .teacherImage {
+                padding: 20px;
+
+            }
+
+            .infoTeacher {
+                padding: 10px;
+                height: 480px;
+
+                article {
+                    h4 {
+                        font-size: 22px;
+                        color: $white;
+                        margin-bottom: 20px;
+                    }
+
+                    p {
+                        font-size: 16px;
+                        max-height: 288px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width:768px) {
+    .aboutUs {
+        .row {
+            justify-content: center;
+
+            .teacherImage {
+                padding: 20px;
+
+            }
+
+            .infoTeacher {
+                padding: 10px;
+                height: 480px;
+
+                article {
+                    h4 {
+                        font-size: 20px;
+                        color: $white;
+                        margin-bottom: 20px;
+                    }
+
+                    p {
+                        font-size: 14px;
+                        max-height: 288px;
+                        line-height: 24px;
+                    }
+                }
+            }
+        }
+    }
+}

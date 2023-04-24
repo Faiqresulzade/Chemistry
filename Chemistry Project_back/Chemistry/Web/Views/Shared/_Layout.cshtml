@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/assets/style/css/style.css">
+    <script src="https://kit.fontawesome.com/3578d1d38b.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="~/assets/media/logo.png" type="image/x-icon">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"
+          integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"
+          integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Vefa Kerimli</title>
+</head>
+
+<body>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+            integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
+            integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <div id="preloader"></div>
+    <div class="scroll-up">
+        <button class="scroll-btn" href="#">
+            <i class="fa-solid fa-arrow-up"></i>
+        </button>
+    </div>
+    <header class="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-12">
+                    <nav class="main-nav">
+                        <a href="./index.html" class="logo">
+                            <h3>scholor</h3>
+                        </a>
+
+                        <div class="allNavbar">
+                            <ul class="nav-desktop">
+                                <li><a href="./index.html">əsas</a></li>
+                                <li><a href="./index.html#about-us">haqqımızda</a></li>
+                                <li><a href="./index.html#trials">sınaqlar</a></li>
+                                <li><a href="./lesson.html">dərslər</a></li>
+                                <li><a href="./index.html#graduater">məzunlarımız</a></li>
+                                <li><a href="./index.html#news">xəbərlər</a></li>
+                                <li><a href="./index.html#contact-us">əlaqə</a></li>
+                                <li><a href="./login.html">daxil ol</a></li>
+                            </ul>
+                            <div class="sidebar-nav">
+                                <a href="./index.html" class="logo-mobile">
+                                    <h3>scholor</h3>
+                                </a>
+                                <ul class="nav-mobile">
+                                    <li><a href="./index.html">əsas</a></li>
+                                    <li><a href="./index.html#about-us">haqqımızda</a></li>
+                                    <li><a href="./index.html#trials">sınaqlar</a></li>
+                                    <li><a href="./lesson.html">dərslər</a></li>
+                                    <li><a href="./index.html#graduater">məzunlarımız</a></li>
+                                    <li><a href="./index.html#news">xəbərlər</a></li>
+                                    <li><a href="./index.html#contact-us">əlaqə</a></li>
+                                    <li><a href="./login.html">daxil ol</a></li>
+                                </ul>
+                            </div>
+                            <div class="overlay-sidebar"></div>
+                        </div>
+                        <div class="hamburger-wrapper">
+                            <i class="fa-solid fa-bars hamburger"></i>
+                        </div>
+                    </nav>
+
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ***** Header Area End ***** -->
+    @RenderBody()
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-12 col-md-12 col-s-12 col-xs-12">
+                    <article class="footerContent">
+                        <p>Copyright © 2023 all rights reserved. </p>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="~/assets/javascript/slider.js"></script>
+    <script src="~/assets/javascript/preloader.js"></script>
+    <script src="~/assets/javascript/active.js"></script>
+    <script src="~/assets/javascript/data.js"></script>
+    <script src="~/assets/javascript/increment.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,177 @@
+.heroSection {
+    background: url("../../../../assets/media/banner-bg.jpg")center/cover;
+    background-repeat: no-repeat;
+    min-height: 649px;
+    height: 100%;
+    padding: 80px 0;
+
+    .swiper-wrapper {
+        .slick-dots {
+            li {
+                button {
+                    @include flex();
+
+                    &:before {
+                        color: #fff;
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+
+        .swiper-slide {
+            .row {
+                .swiperImage {
+                    overflow-x: hidden;
+                    margin: 50px 0;
+                    background: url("../../../../assets/media/banner-item-01.jpg") center/cover;
+                    min-height: 500px;
+                    width: 100%;
+                    background-repeat: no-repeat;
+                    border-radius: 50px;
+                    @include flex($justify-content: flex-start);
+
+                    article {
+                        margin: 20px 50px;
+                        text-align: start;
+
+                        .swiperCategory {
+                            background-color: $violet;
+                            color: $white;
+                            padding: 5px 15px;
+                            display: inline-block;
+                            font-size: 14px;
+                            text-transform: uppercase;
+                            border-radius: 30px;
+                            margin-bottom: 50px;
+                        }
+
+                        h3 {
+                            font-size: 48px;
+                            font-weight: 500;
+                            color: $white;
+                            line-height: 80px;
+                            width: 55%;
+                            margin-bottom: 40px;
+                        }
+
+                        p {
+                            color: $primary-color;
+                            width: 65%;
+                            font-size: 14px;
+                            line-height: 28px;
+                        }
+
+                    }
+                }
+
+                .swiperImage-2 {
+                    background: url("../../../../assets/media/banner-item-02.jpg");
+                }
+
+                .swiperImage-3 {
+                    background: url("../../../../assets/media/banner-item-03.jpg");
+                }
+
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:992px) {
+    .heroSection {
+        .swiper-wrapper {
+
+            .swiper-slide {
+
+                .row {
+                    .swiperImage {
+                        min-height: 400px;
+                        border-radius: 20px;
+
+                        article {
+                            text-align: center;
+
+                            h3 {
+                                font-size: 36px;
+                                width: 100%;
+                            }
+
+                            .swiperCategory {
+                                margin-bottom: 40px;
+                            }
+
+                            p {
+                                width: 100%;
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media only screen and (max-width:768px) {
+    .heroSection {
+        .swiper-wrapper {
+            .swiper-slide {
+                .row {
+                    .swiperImage {
+                        article {
+                            text-align: center;
+
+                            h3 {
+                                line-height: 50px;
+                            }
+
+                            .swiperCategory {
+                                margin-bottom: 40px;
+                            }
+
+                            p {
+                                width: 100%;
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media only screen and (max-width:768px) {
+    .heroSection {
+        .swiper-wrapper {
+            .swiper-slide {
+                .row {
+                    .swiperImage {
+                        article {
+                            margin: 15px 10px;
+                            text-align: center;
+
+                            h3 {
+                                font-size: 25px;
+                                line-height: 40px;
+                            }
+
+                            .swiperCategory {
+                                margin-bottom: 40px;
+                            }
+
+                            p {
+                                width: 100%;
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}

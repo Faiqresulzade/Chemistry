@@ -1,0 +1,284 @@
+.register {
+    background: url("../../../../assets/media/login-background.jpg");
+    min-height: 100vh;
+    @include flex();
+    width: 100%;
+    overflow: hidden;
+
+    .wrap-register {
+        margin: 16px 0;
+        background: #fff;
+        border-radius: 10px;
+        overflow: hidden;
+        @include flex($flex-wrap: wrap, $justify-content: space-between);
+        padding: 100px 130px 33px 95px;
+
+        .row {
+            align-items: flex-start;
+
+            .register-picture {
+                img {
+                    width: 100%;
+                }
+            }
+
+            .register-form {
+                width: 100%;
+
+                .register-form-title {
+                    font-size: 24px;
+                    color: #333;
+                    line-height: 1.2;
+                    text-align: center;
+                    width: 100%;
+                    display: block;
+                    padding-bottom: 25px;
+                }
+
+                .validation-input {
+
+                    .invalid {
+                        &.error {
+                            display: flex;
+                        }
+                    }
+
+                    .error {
+                        padding: 10px 0;
+                        align-items: center;
+                        margin-top: 6px;
+                        color: #d93025;
+                        font-size: 13px;
+                        display: none;
+                        line-height: 20px;
+                        .error-icon {
+                            margin-right: 6px;
+                            font-size: 15px;
+                        }
+                    }
+
+
+                    .validate-input {
+                        position: relative;
+                    }
+
+                    .wrap-input {
+                        width: 100%;
+                        z-index: 1;
+                        margin-bottom: 10px;
+
+                        .input {
+                            font-size: 15px;
+                            line-height: 1.5;
+                            color: #666;
+                            display: block;
+                            outline: none;
+                            border: none;
+                            width: 100%;
+                            background: #e6e6e6;
+                            height: 50px;
+                            border-radius: 25px;
+                            padding: 0 30px 0 68px;
+                            &::placeholder{
+                                font-size: 13px;
+                            }
+                            &:focus {
+                                &+.focus-input {
+                                    animation: anim-shadow 0.5s ease-in-out forwards;
+
+                                    &+.symbol-input {
+                                        color: #57b846;
+                                        padding-left: 28px;
+                                    }
+                                }
+
+                            }
+
+                            @keyframes anim-shadow {
+                                to {
+                                    box-shadow: 0px 0px 70px 25px;
+                                    opacity: 0;
+                                }
+                            }
+
+                        }
+
+                        .focus-input {
+                            display: block;
+                            position: absolute;
+                            border-radius: 25px;
+                            bottom: 0;
+                            left: 0;
+                            z-index: -1;
+                            width: 100%;
+                            height: 100%;
+                            box-shadow: 0 0;
+                            color: rgba(87, 184, 70, .8);
+                        }
+
+                        .symbol-input {
+                            font-size: 15px;
+                            display: flex;
+                            align-items: center;
+                            position: absolute;
+                            border-radius: 25px;
+                            bottom: 0;
+                            height: 100%;
+                            width: 100%;
+                            left: 0;
+                            padding-left: 35px;
+                            pointer-events: none;
+                            color: #666;
+                            transition: all .4s;
+                        }
+
+                        .show-hide {
+                            position: absolute;
+                            right: 13px;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            font-size: 18px;
+                            color: #919191;
+                            cursor: pointer;
+                            padding: 3px;
+                            z-index: 100;
+                        }
+                    }
+                }
+
+                .register-form-btn {
+                    width: 100%;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    padding-top: 20px;
+
+                    .register-button {
+                        cursor: pointer;
+                        outline: none;
+                        border: none;
+                        font-size: 15px;
+                        line-height: 1.5;
+                        color: #fff;
+                        text-transform: uppercase;
+                        width: 100%;
+                        height: 50px;
+                        border-radius: 25px;
+                        background: #57b846;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        padding: 0 25px;
+                        transition: all .4s;
+                    }
+                }
+
+
+            }
+
+            .get-login {
+                text-align: center;
+                padding-top: 40px;
+
+                a {
+                    font-size: 13px;
+                    line-height: 1.5;
+                    color: #666;
+                    background-color: transparent;
+                    cursor: pointer;
+                    transition: .4s;
+
+                    &:hover {
+                        color: #57b846;
+
+                    }
+
+                    i {
+                        margin-left: 5px;
+                    }
+                }
+            }
+
+            .home-page {
+                margin: 20px 0;
+                text-align: center;
+
+                a {
+                    cursor: pointer;
+                    outline: none;
+                    border: none;
+                    font-size: 15px;
+                    line-height: 1.5;
+                    color: #666;
+                    text-transform: capitalize;
+                    border-radius: 25px;
+                    transition: all .4s;
+
+                    &:hover {
+                        color: #57b846;
+
+                    }
+
+                    i {
+                        margin-left: 5px;
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .register{
+        .wrap-register {
+            padding: 110px 20px 33px 25px;
+
+            .row {
+                .register-picture {
+                    img {
+                        width: 100%;
+                    }
+                }
+
+                .register-form {
+                    width: 100%;
+
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .register{
+        .wrap-register{
+            padding: 100px 80px 33px;
+
+            .row {
+                .register-picture {
+                    display: none;
+                }
+
+                .register-form {
+                    width: 100%;
+
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .register {
+        .wrap-register {
+            padding: 100px 15px 33px 15px;
+
+            .row {
+                .register-picture {
+                    display: none;
+                }
+            }
+        }
+    }
+}
