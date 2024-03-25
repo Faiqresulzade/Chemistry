@@ -1,0 +1,22 @@
+﻿@using Core.Entities
+@model List<VideoLesson>
+
+
+@foreach (var videolessoncategory in Model)
+{
+    <div class="all-lesson col-12 col-lg-4 col-md-6" data-name="@videolessoncategory.Title.ToUpper()">
+        <div class="lesson">
+            <div class="lessonImage">
+                <img src="~/assets/media/@videolessoncategory.Photo" alt="@videolessoncategory.Category.CategoryTitle">
+            </div>
+            <article>
+                <h4 class="lessonKind" title="lesson kind">@videolessoncategory.Title</h4>
+                <div class="detailButton">
+                    <a asp-action="details" asp-controller="videolesson" asp-route-id="@videolessoncategory.Id" target="_blank">Ətraflı bax</a>
+                </div>
+            </article>
+
+        </div>
+
+    </div>
+}

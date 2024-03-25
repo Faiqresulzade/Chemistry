@@ -1,0 +1,50 @@
+﻿@using Web.Areas.chemistry_Vafa_admin.ViewModels.Quiz
+@model QuizIndexVM
+<div class="main-panel">
+    <div class="content-wrapper">
+        <div class="row">
+            <div class="col-lg-12 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Quizzes</h4>
+                        <a class="btn btn-main" asp-action="create" asp-controller="quiz" asp-area="chemistry-Vafa-admin">Create Quiz</a>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Id</th>
+                                        <th>Title</th>
+                                        <th>Category</th>
+                                        <th>Correct Variant</th>
+                                        <th>CreateAt</th>
+                                        <th>ModifiedAt</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var quiz in Model.Quizzes)
+                                    {
+                                        <tr>
+                                            <td>@quiz.Id</td>
+                                            <td>@quiz.QuizTitle</td>
+                                            <td>@quiz.QuizCategory.Name</td>
+                                            <td>@quiz.CorrectVariant</td>
+                                            <td>@quiz.CreateAt.ToShortDateString()/  @quiz.CreateAt.ToShortTimeString()</td>
+                                            <td>@quiz.ModifiedAt.ToShortDateString()/  @quiz.ModifiedAt.ToShortTimeString()</td>
+                                            <td>
+                                                <a class="btn btn-primary" asp-action="details" asp-controller="quiz" asp-area="chemistry-Vafa-admin" asp-route-id="@quiz.Id">Details</a>
+                                                <a class="btn btn-danger" asp-action="GetDelete" asp-controller="quiz" asp-area="chemistry-Vafa-admin" asp-route-id="@quiz.Id">Delete</a>
+                                                <a class="btn btn-primary" asp-action="update" asp-controller="quiz" asp-area="chemistry-Vafa-admin" asp-route-id="@quiz.Id">Update</a>
+                                            </td>
+                                        </tr>
+
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

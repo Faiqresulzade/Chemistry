@@ -1,0 +1,42 @@
+C:\Users\Honor\Desktop\Chemistry Project\Chemistry\Chemistry\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\Honor\Desktop\Chemistry Project\Chemistry\Chemistry\bin\Debug\net6.0\appsettings.json
+C:\Users\Honor\Desktop\Chemistry Project\Chemistry\Chemistry\bin\Debug\net6.0\Chemistry.exe
+C:\Users\Honor\Desktop\Chemistry Project\Chemistry\Chemistry\bin\Debug\net6.0\Chemistry.deps.json
+C:\Users\Honor\Desktop\Chemistry Project\Chemistry\Chemistry\bin\Debug\net6.0\Chemistry.runtimeconfig.json
+C:\Users\Honor\Desktop\Chemistry Project\Chemistry\Chemistry\bin\Debug\net6.0\Chemistry.dll
+C:\Users\Honor\Desktop\Chemistry Project\Chemistry\Chemistry\bin\Debug\net6.0\Chemistry.pdb
+C:\Users\Honor\Desktop\Chemistry Project\Chemistry\Chemistry\obj\Debug\net6.0\Chemistry.csproj.AssemblyReference.cache
+C:\Users\Honor\Desktop\Chemistry Project\Chemistry\Chemistry\obj\Debug\net6.0\Chemistry.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Honor\Desktop\Chemistry Project\Chemistry\Chemistry\obj\Debug\net6.0\Chemistry.AssemblyInfoInputs.cache
+C:\Users\Honor\Desktop\Chemistry Project\Chemistry\Chemistry\obj\Debug\net6.0\Chemistry.AssemblyInfo.cs
+C:\Users\Honor\Desktop\Chemistry Project\Chemistry\Chemistry\obj\Debug\net6.0\Chemistry.csproj.CoreCompileInputs.cache
+C:\Users\Honor\Desktop\Chemistry Project\Chemistry\Chemistry\obj\Debug\net6.0\Chemistry.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Honor\Desktop\Chemistry Project\Chemistry\Chemistry\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\Honor\Desktop\Chemistry Project\Chemistry\Chemistry\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\Honor\Desktop\Chemistry Project\Chemistry\Chemistry\obj\Debug\net6.0\scopedcss\bundle\Chemistry.styles.css
+C:\Users\Honor\Desktop\Chemistry Project\Chemistry\Chemistry\obj\Debug\net6.0\Chemistry.dll
+C:\Users\Honor\Desktop\Chemistry Project\Chemistry\Chemistry\obj\Debug\net6.0\refint\Chemistry.dll
+C:\Users\Honor\Desktop\Chemistry Project\Chemistry\Chemistry\obj\Debug\net6.0\Chemistry.pdb
+C:\Users\Honor\Desktop\Chemistry Project\Chemistry\Chemistry\obj\Debug\net6.0\Chemistry.genruntimeconfig.cache
+C:\Users\Honor\Desktop\Chemistry Project\Chemistry\Chemistry\obj\Debug\net6.0\ref\Chemistry.dll
+C:\Users\Honor\Desktop\chemistry Full\Chemistry Project_back\Chemistry\Chemistry\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\Honor\Desktop\chemistry Full\Chemistry Project_back\Chemistry\Chemistry\bin\Debug\net6.0\appsettings.json
+C:\Users\Honor\Desktop\chemistry Full\Chemistry Project_back\Chemistry\Chemistry\bin\Debug\net6.0\Chemistry.exe
+C:\Users\Honor\Desktop\chemistry Full\Chemistry Project_back\Chemistry\Chemistry\bin\Debug\net6.0\Chemistry.deps.json
+C:\Users\Honor\Desktop\chemistry Full\Chemistry Project_back\Chemistry\Chemistry\bin\Debug\net6.0\Chemistry.runtimeconfig.json
+C:\Users\Honor\Desktop\chemistry Full\Chemistry Project_back\Chemistry\Chemistry\bin\Debug\net6.0\Chemistry.dll
+C:\Users\Honor\Desktop\chemistry Full\Chemistry Project_back\Chemistry\Chemistry\bin\Debug\net6.0\Chemistry.pdb
+C:\Users\Honor\Desktop\chemistry Full\Chemistry Project_back\Chemistry\Chemistry\obj\Debug\net6.0\Chemistry.csproj.AssemblyReference.cache
+C:\Users\Honor\Desktop\chemistry Full\Chemistry Project_back\Chemistry\Chemistry\obj\Debug\net6.0\Chemistry.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Honor\Desktop\chemistry Full\Chemistry Project_back\Chemistry\Chemistry\obj\Debug\net6.0\Chemistry.AssemblyInfoInputs.cache
+C:\Users\Honor\Desktop\chemistry Full\Chemistry Project_back\Chemistry\Chemistry\obj\Debug\net6.0\Chemistry.AssemblyInfo.cs
+C:\Users\Honor\Desktop\chemistry Full\Chemistry Project_back\Chemistry\Chemistry\obj\Debug\net6.0\Chemistry.csproj.CoreCompileInputs.cache
+C:\Users\Honor\Desktop\chemistry Full\Chemistry Project_back\Chemistry\Chemistry\obj\Debug\net6.0\Chemistry.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Honor\Desktop\chemistry Full\Chemistry Project_back\Chemistry\Chemistry\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\Honor\Desktop\chemistry Full\Chemistry Project_back\Chemistry\Chemistry\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\Honor\Desktop\chemistry Full\Chemistry Project_back\Chemistry\Chemistry\obj\Debug\net6.0\scopedcss\bundle\Chemistry.styles.css
+C:\Users\Honor\Desktop\chemistry Full\Chemistry Project_back\Chemistry\Chemistry\obj\Debug\net6.0\Chemistry.dll
+C:\Users\Honor\Desktop\chemistry Full\Chemistry Project_back\Chemistry\Chemistry\obj\Debug\net6.0\refint\Chemistry.dll
+C:\Users\Honor\Desktop\chemistry Full\Chemistry Project_back\Chemistry\Chemistry\obj\Debug\net6.0\Chemistry.pdb
+C:\Users\Honor\Desktop\chemistry Full\Chemistry Project_back\Chemistry\Chemistry\obj\Debug\net6.0\Chemistry.genruntimeconfig.cache
+C:\Users\Honor\Desktop\chemistry Full\Chemistry Project_back\Chemistry\Chemistry\obj\Debug\net6.0\ref\Chemistry.dll

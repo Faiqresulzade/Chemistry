@@ -1,0 +1,49 @@
+﻿@using Web.Areas.chemistry_Vafa_admin.ViewModels.VideoLesson
+@model VideoLessonCreateVM
+<div class="main-panel">
+    <div class="content-wrapper">
+        <div class="row">
+            <div class="col-md-12 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+
+                        <p class="card-description">
+                            Create Video Lesson
+                        </p>
+                        <form enctype="multipart/form-data" method="post" asp-action="create" asp-controller="videolesson" asp-area="chemistry-Vafa-admin" class="forms-sample">
+                            <div class="form-group">
+                                <label asp-for="Title">Title</label>
+                                <input class="form-control" asp-for="Title">
+                                <span asp-validation-for="Title"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Photo">Photo</label>
+                                <input class="form-control" asp-for="Photo">
+                                <span asp-validation-for="Photo"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="VideoPath">VideoPath</label>
+                                <input class="form-control" asp-for="VideoPath">
+                                <span asp-validation-for="VideoPath"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="CategoryId"></label>
+                                <select class="form-select" asp-for="CategoryId" asp-items="Model.Categories"></select>
+                                <span asp-validation-for="CategoryId"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-check-label" asp-for="İsPaid"></label>
+                                <input style="transform:scale(2);margin-left:10px" type="checkbox" asp-for="İsPaid" />
+                                <span asp-validation-for="İsPaid"></span>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary me-2">Submit</button>
+                            <a class="btn btn-light" href="./">Cancel</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

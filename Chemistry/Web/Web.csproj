@@ -1,0 +1,81 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <Optimize>True</Optimize>
+    <DefineConstants>$(DefineConstants);bir</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <Optimize>False</Optimize>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="bin\**" />
+    <Content Remove="bin\**" />
+    <EmbeddedResource Remove="bin\**" />
+    <None Remove="bin\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\assets\media\slider-arrow.svg" />
+    <None Include="wwwroot\assets\media\timer-progress-animated.webp" />
+    <None Include="wwwroot\assets\style\css\style.css.map" />
+    <None Include="wwwroot\assets\style\scss\abstracts\_mixins.scss" />
+    <None Include="wwwroot\assets\style\scss\abstracts\_reset.scss" />
+    <None Include="wwwroot\assets\style\scss\abstracts\_variables.scss" />
+    <None Include="wwwroot\assets\style\scss\base\_font.scss" />
+    <None Include="wwwroot\assets\style\scss\base\_reset.scss" />
+    <None Include="wwwroot\assets\style\scss\layout\_about-us.scss" />
+    <None Include="wwwroot\assets\style\scss\layout\_contact-us.scss" />
+    <None Include="wwwroot\assets\style\scss\layout\_footer.scss" />
+    <None Include="wwwroot\assets\style\scss\layout\_graduate.scss" />
+    <None Include="wwwroot\assets\style\scss\layout\_header.scss" />
+    <None Include="wwwroot\assets\style\scss\layout\_hero.scss" />
+    <None Include="wwwroot\assets\style\scss\layout\_increment.scss" />
+    <None Include="wwwroot\assets\style\scss\layout\_loading.scss" />
+    <None Include="wwwroot\assets\style\scss\layout\_news.scss" />
+    <None Include="wwwroot\assets\style\scss\layout\_scroll-up.scss" />
+    <None Include="wwwroot\assets\style\scss\layout\_trials.scss" />
+    <None Include="wwwroot\assets\style\scss\pages\_detail.scss" />
+    <None Include="wwwroot\assets\style\scss\pages\_email.scss" />
+    <None Include="wwwroot\assets\style\scss\pages\_forgot.scss" />
+    <None Include="wwwroot\assets\style\scss\pages\_lesson-page.scss" />
+    <None Include="wwwroot\assets\style\scss\pages\_login.scss" />
+    <None Include="wwwroot\assets\style\scss\pages\_news-detail.scss" />
+    <None Include="wwwroot\assets\style\scss\pages\_news-page.scss" />
+    <None Include="wwwroot\assets\style\scss\pages\_quiz-detail.scss" />
+    <None Include="wwwroot\assets\style\scss\pages\_quiz.scss" />
+    <None Include="wwwroot\assets\style\scss\pages\_register.scss" />
+    <None Include="wwwroot\assets\style\scss\style.scss" />
+    <None Include="wwwroot\javascript\fontawesome.js" />
+    <None Include="wwwroot\javascript\jquery.js" />
+    <None Include="wwwroot\javascript\logregister.js" />
+    <None Include="wwwroot\javascript\owl.carousel.min.js" />
+    <None Include="wwwroot\javascript\quiz.js" />
+    <None Include="wwwroot\javascript\register.js" />
+    <None Include="wwwroot\javascript\script.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MailKit" Version="4.1.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.9">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.13" />
+    <PackageReference Include="MimeKit" Version="4.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DataAcces\DataAcces.csproj" />
+  </ItemGroup>
+
+</Project>

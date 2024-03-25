@@ -1,0 +1,52 @@
+﻿@using Web.Areas.chemistry_Vafa_admin.ViewModels.News
+@model NewsIndexVM
+<div class="main-panel">
+    <div class="content-wrapper">
+        <div class="row">
+            <div class="col-lg-12 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">News</h4>
+                        <a class="btn btn-main" asp-action="create" asp-controller="news" asp-area="chemistry-Vafa-admin">Create News</a>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Id</th>
+                                        <th>Title</th>
+                                        <th>Category</th>
+                                        <th>CreateAt</th>
+                                        <th>ModifiedAt</th>
+                                        <th>Photo</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var news in Model.News)
+                                    {
+                                        <tr>
+                                            <td>@news.Id</td>
+                                            <td>@news.Title</td>
+                                            <td>@news.Category</td>
+                                            <td>@news.CreateAt.ToShortDateString()/  @news.CreateAt.ToShortTimeString()</td>
+                                            <td>@news.ModifiedAt.ToShortDateString()/  @news.ModifiedAt.ToShortTimeString()</td>
+                                            <td>
+                                                <img style="width:50px; height:70px" src="~/assets/media/@news.Photo?" alt="newsImage" />
+                                            </td>
+                                            <td>
+                                                <a class="btn btn-primary" asp-action="details" asp-controller="news" asp-area="chemistry-Vafa-admin" asp-route-id="@news.Id">Details</a>
+                                                <a class="btn btn-danger" asp-action="GetDelete" asp-controller="news" asp-area="chemistry-Vafa-admin" asp-route-id="@news.Id">Delete</a>
+                                                <a class="btn btn-primary" asp-action="update" asp-controller="news" asp-area="chemistry-Vafa-admin" asp-route-id="@news.Id">Update</a>
+                                            </td>
+                                        </tr>
+
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,132 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="kimya, kimya dərsləri,kimya sinagi,miq,abituriyent,kimya miq,kimya suallari,vəfa kerimli,kimya dersleri,vefa kerimli,agma,muellim,məllim,müəllim">
+    <meta name="keywords" content="kimya, kimya dərsləri,kimya sinagi,miq,abituriyent,kimya miq,kimya suallari,vəfa kerimli,kimya dersleri,vefa kerimli,agma,muellim,məllim,müəllim">
+    <meta name="google-site-verification" content="aA_wxrUo2JbeY1xX594i5IJzvD6_ffztc3gAIcTd9Fg" />
+    <link rel="shortcut icon" href="~/assets/media/faiqlogocopy.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="~/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="~/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="~/assets/style/css/style.css">
+    <title>Vefa Kerimli</title>
+</head>
+
+
+<body>
+
+    <header id="masthead" class="small-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-12">
+                    <nav class="main-nav">
+                        <a asp-action="index" asp-controller="home" class="logo" rel="nofollow">
+                            <img src="~/assets/media/KimyaBirliyiLogo.webp" alt="Logo">
+                        </a>
+                        <div class="allNavbar">
+                            <ul class="nav-desktop">
+                                <li><a class="active" asp-action="index" asp-controller="home" rel="nofollow">əsas</a></li>
+                                <li><a href="~/#about-us" rel="nofollow">haqqımızda</a></li>
+                                <li><a asp-action="index" asp-controller="quizcategory" rel="nofollow">sınaqlar</a></li>
+                                <li><a asp-action="index" asp-controller="videolesson" rel="nofollow">dərslər</a></li>
+                                <li><a  asp-action="index" asp-controller="resource" rel="nofollow">materiallar</a></li>
+                                <li><a asp-action="index" asp-controller="news" rel="nofollow">xəbərlər</a></li>
+                                <li><a href="~/#contactus" rel="nofollow">əlaqə</a></li>
+                                @{
+                                    if (User.Identity.IsAuthenticated)
+                                    {
+                                        <li><a asp-action="Logout" asp-controller="account" rel="nofollow">çıxış</a></li>
+                                        <li>@User.Identity.Name</li>
+                                    }
+                                    else
+                                    {
+                                        <li><a asp-action="login" asp-controller="account" rel="nofollow">daxil ol</a></li>
+                                    }
+                                }
+                            </ul>
+                            <div class="hamburger-menu">
+                                <button id="hamburger" class="hamburger">
+                                    <div class="bar1"></div>
+                                    <div class="bar2"></div>
+                                    <div class="bar3"></div>
+                                </button>
+                            </div>
+                        </div>
+
+                    </nav>
+
+                </div>
+            </div>
+        </div>
+        <div class="all-sidebar">
+            <div class="sidebar-nav">
+                <div class="sidebar-header">
+                    <a asp-action="index" asp-controller="home" class="logo" rel="nofollow">
+                        <img src="~/assets/media/KimyaBirliyiLogo.webp" alt="Logo">
+                    </a>
+                    <button id="close-icon" type="button">
+                        <img src="~/assets/media/close.png" alt="close icon">
+                    </button>
+                </div>
+                <div class="sidebar-body">
+                    <ul class="menu">
+                        <li><a class="active" asp-action="index" asp-controller="home" rel="nofollow">əsas</a></li>
+                        <li><a href="~/#about-us" rel="nofollow">haqqımızda</a></li>
+                        <li><a asp-action="index" asp-controller="quizcategory" rel="nofollow">sınaqlar</a></li>
+                        <li><a asp-action="index" asp-controller="videolesson" rel="nofollow">dərslər</a></li>
+                        <li><a href="~/#graduater" rel="nofollow">materiallar</a></li>
+                        <li><a asp-action="index" asp-controller="news" rel="nofollow">xəbərlər</a></li>
+                        <li><a href="~/#contactus" rel="nofollow">əlaqə</a></li>
+                        @{
+                            if (User.Identity.IsAuthenticated)
+                            {
+                                <li><a asp-action="Logout" asp-controller="Account" rel="nofollow">çıxış</a></li>
+                                <li>@User.Identity.Name</li>
+                            }
+                            else
+                            {
+                                <li><a asp-action="login" asp-controller="account" rel="nofollow">daxil ol</a></li>
+                            }
+                        }
+                    </ul>
+                </div>
+            </div>
+            <div class="overlay-sidebar"></div>
+        </div>
+    </header>
+
+    @RenderBody()
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <article class="footerContent">
+                        <p>
+                            <script>
+                                document.write(new Date().getFullYear());
+                            </script> © Bütün hüquqlar qorunur
+                        </p>
+                        <span>by  MATRIX STUDIO </span>
+                    </article>
+                </div>
+                <div class="col-12 col-lg-6 col-md-6">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="~/javascript/jquery.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="~/javascript/fontawesome.js"></script>
+    <script src="~/javascript/owl.carousel.min.js"></script>
+    <script src="~/javascript/script.js"></script>
+    <script src="~/javascript//Back.js"></script>
+</body>
+
+</html>

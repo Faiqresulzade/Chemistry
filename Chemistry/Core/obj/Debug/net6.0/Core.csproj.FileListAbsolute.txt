@@ -1,0 +1,72 @@
+C:\Users\Honor\Desktop\chemistry Full\Chemistry Project\Chemistry\Core\bin\Debug\net6.0\Core.deps.json
+C:\Users\Honor\Desktop\chemistry Full\Chemistry Project\Chemistry\Core\bin\Debug\net6.0\Core.dll
+C:\Users\Honor\Desktop\chemistry Full\Chemistry Project\Chemistry\Core\bin\Debug\net6.0\Core.pdb
+C:\Users\Honor\Desktop\chemistry Full\Chemistry Project\Chemistry\Core\obj\Debug\net6.0\Core.csproj.AssemblyReference.cache
+C:\Users\Honor\Desktop\chemistry Full\Chemistry Project\Chemistry\Core\obj\Debug\net6.0\Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Honor\Desktop\chemistry Full\Chemistry Project\Chemistry\Core\obj\Debug\net6.0\Core.AssemblyInfoInputs.cache
+C:\Users\Honor\Desktop\chemistry Full\Chemistry Project\Chemistry\Core\obj\Debug\net6.0\Core.AssemblyInfo.cs
+C:\Users\Honor\Desktop\chemistry Full\Chemistry Project\Chemistry\Core\obj\Debug\net6.0\Core.csproj.CoreCompileInputs.cache
+C:\Users\Honor\Desktop\chemistry Full\Chemistry Project\Chemistry\Core\obj\Debug\net6.0\Core.dll
+C:\Users\Honor\Desktop\chemistry Full\Chemistry Project\Chemistry\Core\obj\Debug\net6.0\refint\Core.dll
+C:\Users\Honor\Desktop\chemistry Full\Chemistry Project\Chemistry\Core\obj\Debug\net6.0\Core.pdb
+C:\Users\Honor\Desktop\chemistry Full\Chemistry Project\Chemistry\Core\obj\Debug\net6.0\ref\Core.dll
+C:\Users\Honor\Desktop\chemistry Full\Chemistry Project_back\Chemistry\Core\bin\Debug\net6.0\Core.deps.json
+C:\Users\Honor\Desktop\chemistry Full\Chemistry Project_back\Chemistry\Core\bin\Debug\net6.0\Core.dll
+C:\Users\Honor\Desktop\chemistry Full\Chemistry Project_back\Chemistry\Core\bin\Debug\net6.0\Core.pdb
+C:\Users\Honor\Desktop\chemistry Full\Chemistry Project_back\Chemistry\Core\obj\Debug\net6.0\Core.csproj.AssemblyReference.cache
+C:\Users\Honor\Desktop\chemistry Full\Chemistry Project_back\Chemistry\Core\obj\Debug\net6.0\Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Honor\Desktop\chemistry Full\Chemistry Project_back\Chemistry\Core\obj\Debug\net6.0\Core.AssemblyInfoInputs.cache
+C:\Users\Honor\Desktop\chemistry Full\Chemistry Project_back\Chemistry\Core\obj\Debug\net6.0\Core.AssemblyInfo.cs
+C:\Users\Honor\Desktop\chemistry Full\Chemistry Project_back\Chemistry\Core\obj\Debug\net6.0\Core.csproj.CoreCompileInputs.cache
+C:\Users\Honor\Desktop\chemistry Full\Chemistry Project_back\Chemistry\Core\obj\Debug\net6.0\Core.dll
+C:\Users\Honor\Desktop\chemistry Full\Chemistry Project_back\Chemistry\Core\obj\Debug\net6.0\refint\Core.dll
+C:\Users\Honor\Desktop\chemistry Full\Chemistry Project_back\Chemistry\Core\obj\Debug\net6.0\Core.pdb
+C:\Users\Honor\Desktop\chemistry Full\Chemistry Project_back\Chemistry\Core\obj\Debug\net6.0\ref\Core.dll
+C:\Users\mirqu\OneDrive\İş masası\Chemistry_Full-master\Chemistry Project_back\Chemistry\Core\bin\Debug\net6.0\Core.deps.json
+C:\Users\mirqu\OneDrive\İş masası\Chemistry_Full-master\Chemistry Project_back\Chemistry\Core\bin\Debug\net6.0\Core.dll
+C:\Users\mirqu\OneDrive\İş masası\Chemistry_Full-master\Chemistry Project_back\Chemistry\Core\bin\Debug\net6.0\Core.pdb
+C:\Users\mirqu\OneDrive\İş masası\Chemistry_Full-master\Chemistry Project_back\Chemistry\Core\obj\Debug\net6.0\Core.csproj.AssemblyReference.cache
+C:\Users\mirqu\OneDrive\İş masası\Chemistry_Full-master\Chemistry Project_back\Chemistry\Core\obj\Debug\net6.0\Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mirqu\OneDrive\İş masası\Chemistry_Full-master\Chemistry Project_back\Chemistry\Core\obj\Debug\net6.0\Core.AssemblyInfoInputs.cache
+C:\Users\mirqu\OneDrive\İş masası\Chemistry_Full-master\Chemistry Project_back\Chemistry\Core\obj\Debug\net6.0\Core.AssemblyInfo.cs
+C:\Users\mirqu\OneDrive\İş masası\Chemistry_Full-master\Chemistry Project_back\Chemistry\Core\obj\Debug\net6.0\Core.csproj.CoreCompileInputs.cache
+C:\Users\mirqu\OneDrive\İş masası\Chemistry_Full-master\Chemistry Project_back\Chemistry\Core\obj\Debug\net6.0\Core.dll
+C:\Users\mirqu\OneDrive\İş masası\Chemistry_Full-master\Chemistry Project_back\Chemistry\Core\obj\Debug\net6.0\refint\Core.dll
+C:\Users\mirqu\OneDrive\İş masası\Chemistry_Full-master\Chemistry Project_back\Chemistry\Core\obj\Debug\net6.0\Core.pdb
+C:\Users\mirqu\OneDrive\İş masası\Chemistry_Full-master\Chemistry Project_back\Chemistry\Core\obj\Debug\net6.0\ref\Core.dll
+C:\Users\Honor\Desktop\Chemistry_Full-master\Chemistry Project_back\Chemistry\Core\bin\Debug\net6.0\Core.deps.json
+C:\Users\Honor\Desktop\Chemistry_Full-master\Chemistry Project_back\Chemistry\Core\bin\Debug\net6.0\Core.dll
+C:\Users\Honor\Desktop\Chemistry_Full-master\Chemistry Project_back\Chemistry\Core\bin\Debug\net6.0\Core.pdb
+C:\Users\Honor\Desktop\Chemistry_Full-master\Chemistry Project_back\Chemistry\Core\obj\Debug\net6.0\Core.csproj.AssemblyReference.cache
+C:\Users\Honor\Desktop\Chemistry_Full-master\Chemistry Project_back\Chemistry\Core\obj\Debug\net6.0\Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Honor\Desktop\Chemistry_Full-master\Chemistry Project_back\Chemistry\Core\obj\Debug\net6.0\Core.AssemblyInfoInputs.cache
+C:\Users\Honor\Desktop\Chemistry_Full-master\Chemistry Project_back\Chemistry\Core\obj\Debug\net6.0\Core.AssemblyInfo.cs
+C:\Users\Honor\Desktop\Chemistry_Full-master\Chemistry Project_back\Chemistry\Core\obj\Debug\net6.0\Core.csproj.CoreCompileInputs.cache
+C:\Users\Honor\Desktop\Chemistry_Full-master\Chemistry Project_back\Chemistry\Core\obj\Debug\net6.0\Core.dll
+C:\Users\Honor\Desktop\Chemistry_Full-master\Chemistry Project_back\Chemistry\Core\obj\Debug\net6.0\refint\Core.dll
+C:\Users\Honor\Desktop\Chemistry_Full-master\Chemistry Project_back\Chemistry\Core\obj\Debug\net6.0\Core.pdb
+C:\Users\Honor\Desktop\Chemistry_Full-master\Chemistry Project_back\Chemistry\Core\obj\Debug\net6.0\ref\Core.dll
+C:\Users\Honor\Desktop\Chemistry-FullEnd\ChemistryTheEnd\Chemistry Project_back\Chemistry\Core\bin\Debug\net6.0\Core.deps.json
+C:\Users\Honor\Desktop\Chemistry-FullEnd\ChemistryTheEnd\Chemistry Project_back\Chemistry\Core\bin\Debug\net6.0\Core.dll
+C:\Users\Honor\Desktop\Chemistry-FullEnd\ChemistryTheEnd\Chemistry Project_back\Chemistry\Core\bin\Debug\net6.0\Core.pdb
+C:\Users\Honor\Desktop\Chemistry-FullEnd\ChemistryTheEnd\Chemistry Project_back\Chemistry\Core\obj\Debug\net6.0\Core.csproj.AssemblyReference.cache
+C:\Users\Honor\Desktop\Chemistry-FullEnd\ChemistryTheEnd\Chemistry Project_back\Chemistry\Core\obj\Debug\net6.0\Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Honor\Desktop\Chemistry-FullEnd\ChemistryTheEnd\Chemistry Project_back\Chemistry\Core\obj\Debug\net6.0\Core.AssemblyInfoInputs.cache
+C:\Users\Honor\Desktop\Chemistry-FullEnd\ChemistryTheEnd\Chemistry Project_back\Chemistry\Core\obj\Debug\net6.0\Core.AssemblyInfo.cs
+C:\Users\Honor\Desktop\Chemistry-FullEnd\ChemistryTheEnd\Chemistry Project_back\Chemistry\Core\obj\Debug\net6.0\Core.csproj.CoreCompileInputs.cache
+C:\Users\Honor\Desktop\Chemistry-FullEnd\ChemistryTheEnd\Chemistry Project_back\Chemistry\Core\obj\Debug\net6.0\Core.dll
+C:\Users\Honor\Desktop\Chemistry-FullEnd\ChemistryTheEnd\Chemistry Project_back\Chemistry\Core\obj\Debug\net6.0\refint\Core.dll
+C:\Users\Honor\Desktop\Chemistry-FullEnd\ChemistryTheEnd\Chemistry Project_back\Chemistry\Core\obj\Debug\net6.0\Core.pdb
+C:\Users\Honor\Desktop\Chemistry-FullEnd\ChemistryTheEnd\Chemistry Project_back\Chemistry\Core\obj\Debug\net6.0\ref\Core.dll
+C:\Users\Honor\Desktop\Chemistry Project_back\Chemistry\Core\bin\Debug\net6.0\Core.deps.json
+C:\Users\Honor\Desktop\Chemistry Project_back\Chemistry\Core\bin\Debug\net6.0\Core.dll
+C:\Users\Honor\Desktop\Chemistry Project_back\Chemistry\Core\bin\Debug\net6.0\Core.pdb
+C:\Users\Honor\Desktop\Chemistry Project_back\Chemistry\Core\obj\Debug\net6.0\Core.csproj.AssemblyReference.cache
+C:\Users\Honor\Desktop\Chemistry Project_back\Chemistry\Core\obj\Debug\net6.0\Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Honor\Desktop\Chemistry Project_back\Chemistry\Core\obj\Debug\net6.0\Core.AssemblyInfoInputs.cache
+C:\Users\Honor\Desktop\Chemistry Project_back\Chemistry\Core\obj\Debug\net6.0\Core.AssemblyInfo.cs
+C:\Users\Honor\Desktop\Chemistry Project_back\Chemistry\Core\obj\Debug\net6.0\Core.csproj.CoreCompileInputs.cache
+C:\Users\Honor\Desktop\Chemistry Project_back\Chemistry\Core\obj\Debug\net6.0\Core.dll
+C:\Users\Honor\Desktop\Chemistry Project_back\Chemistry\Core\obj\Debug\net6.0\refint\Core.dll
+C:\Users\Honor\Desktop\Chemistry Project_back\Chemistry\Core\obj\Debug\net6.0\Core.pdb
+C:\Users\Honor\Desktop\Chemistry Project_back\Chemistry\Core\obj\Debug\net6.0\ref\Core.dll

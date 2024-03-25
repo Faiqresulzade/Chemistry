@@ -1,0 +1,55 @@
+﻿@using Core.Entities
+@using Web.Areas.chemistry_Vafa_admin.ViewModels.User
+@using Microsoft.AspNetCore.Identity;
+@using Microsoft.AspNetCore.Identity
+@inject UserManager<User> UserManager
+
+@model UserIndexVM
+<div class="main-panel">
+    <div class="content-wrapper">
+        <div class="row">
+            <div class="col-lg-12 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Users</h4>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Surname</th>
+                                        <th>Email</th>
+                                        <th>User role</th>
+                                        <th>Create Time</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var user in Model.Users)
+                                    {
+                                        <tr>
+                                            <td>@user.Name</td>
+                                            <td>@user.Surname</td>
+                                            <td>@user.Email</td>
+                                            @{
+                                                var roles = await UserManager.GetRolesAsync(user);
+                                                foreach (var role in roles)
+                                                {
+                                                    <td>@role</td>
+                                                }
+                                            }
+                                            <td>@user.CreatedAt</td>
+                                            <td>
+                                                <a class="btn btn-danger" asp-action="Delete" asp-controller="Users" asp-area="chemistry-Vafa-admin" asp-route-id="@user.Id">Delete</a>
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

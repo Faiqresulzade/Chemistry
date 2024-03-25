@@ -1,0 +1,43 @@
+﻿@using Web.Areas.chemistry_Vafa_admin.ViewModels.CurseInfo
+@model CurseInfoUpdateVM
+<div class="main-panel">
+    <div class="content-wrapper">
+        <div class="row">
+            <div class="col-md-12 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+
+                        <p class="card-description">
+                            Update Curse Info
+                        </p>
+                        
+                        <form enctype="multipart/form-data" method="post" asp-action="update" asp-controller="curseinfo" asp-area="chemistry-Vafa-admin" class="forms-sample">
+                            <div class="form-group">
+                                <label asp-for="@Model.Curseİnfos.Graduates">Graduates</label>
+                                <input class="form-control" asp-for="@Model.Curseİnfos.Graduates">
+                                <span asp-validation-for="@Model.Curseİnfos.Graduates"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="@Model.Curseİnfos.VideoLesson">Video Lesson</label>
+                                <input class="form-control" asp-for="@Model.Curseİnfos.VideoLesson">
+                                <span asp-validation-for="@Model.Curseİnfos.VideoLesson"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="@Model.Curseİnfos.Test">Test</label>
+                                <input class="form-control" asp-for="@Model.Curseİnfos.Test">
+                                <span asp-validation-for="@Model.Curseİnfos.Test"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="@Model.Curseİnfos.Experience">Experience</label>
+                                <input class="form-control" asp-for="@Model.Curseİnfos.Experience">
+                                <span asp-validation-for="@Model.Curseİnfos.Experience"></span>
+                            </div>
+                            <button type="submit" class="btn btn-primary me-2">Submit</button>
+                            <a class="btn btn-light" href="./">Cancel</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

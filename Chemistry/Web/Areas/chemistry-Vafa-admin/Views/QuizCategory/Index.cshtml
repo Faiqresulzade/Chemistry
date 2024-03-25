@@ -1,0 +1,51 @@
+﻿@using Web.Areas.chemistry_Vafa_admin.ViewModels.QuizCategory
+@model QuizCategoryIndexVM
+<div class="main-panel">
+    <div class="content-wrapper">
+        <div class="row">
+            <div class="col-lg-12 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">QuizCategory</h4>
+                        <a class="btn btn-main" asp-action="create" asp-controller="quizCategory" asp-area="chemistry-Vafa-admin">Create QuizCategory</a>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Id</th>
+                                        <th>Name</th>
+                                        <th>CreateAt</th>
+                                        <th>ModifiedAt</th>
+                                        <th>Photo</th>
+                                        <th>Ödənişlidirmi?</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var quizCategory in Model.QuizCategories)
+                                    {
+                                        <tr>
+                                            <td>@quizCategory.Id</td>
+                                            <td>@quizCategory.Name</td>
+                                            <td>@quizCategory.CreateAt.ToShortDateString()/  @quizCategory.CreateAt.ToShortTimeString()</td>
+                                            <td>@quizCategory.ModifiedAt.ToShortDateString()/  @quizCategory.ModifiedAt.ToShortTimeString()</td>
+                                            <td>
+                                                <img style="width:50px; height:70px" src="~/assets/media/@quizCategory.Photo?" alt="@quizCategory.Name" />
+                                            </td>
+                                            <td>@quizCategory.İsPaid</td>
+                                            <td>
+                                                <a class="btn btn-danger" asp-action="GetDelete" asp-controller="quizCategory" asp-area="chemistry-Vafa-admin" asp-route-id="@quizCategory.Id">Delete</a>
+                                                <a class="btn btn-primary" asp-action="update" asp-controller="quizCategory" asp-area="chemistry-Vafa-admin" asp-route-id="@quizCategory.Id">Update</a>
+                                            </td>
+                                        </tr>
+
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

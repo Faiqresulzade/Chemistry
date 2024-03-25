@@ -1,0 +1,20 @@
+﻿@using Core.Entities
+@model News
+<div class="post-events container">
+    <div class="post-events-bg col-lg-8">
+        <img src="~/assets/media/@Model.Photo" alt="@Model.Title"/>
+        <div class="post-events-title">
+            <p> @Model.CreateAt.ToShortDateString()/  @Model.CreateAt.ToShortTimeString()</p>
+            <h2>@Model.Title</h2>
+        </div>
+    </div>
+    <div class="post-events-description col-lg-12">
+        <p>
+          @Html.Raw(@Model.Info)
+
+        </p>
+
+
+    </div>
+    <a class="btn btn-light" href="../">Cancel</a>
+</div>

@@ -1,0 +1,51 @@
+﻿@using Web.Areas.chemistry_Vafa_admin.ViewModels.CurseInfo
+@model CurseInfoIndexVM
+<div class="main-panel">
+    <div class="content-wrapper">
+        <div class="row">
+            <div class="col-lg-12 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Curse Info</h4>
+
+                        @if (Model.Curseİnfos == null)
+                        {
+                            <a class="btn btn-main" asp-action="create" asp-controller="curseinfo" asp-area="chemistry-Vafa-admin">Create Curse Info</a>
+                        }
+                        else
+                        {
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Id</th>
+                                            <th>Məzunların sayı</th>
+                                            <th>Sınaq sayı</th>
+                                            <th>Video Dərs sayı</th>
+                                            <th>Təcrübə</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>@Model.Curseİnfos.Id</td>
+                                            <td>@Model.Curseİnfos.Graduates</td>
+                                            <td>@Model.Curseİnfos.Test</td>
+                                            <td>@Model.Curseİnfos.VideoLesson</td>
+                                            <td>@Model.Curseİnfos.Experience</td>
+                                            <td>
+                                                <a class="btn btn-danger" asp-action="Delete" asp-controller="curseinfo" asp-area="chemistry-Vafa-admin" asp-route-id="@Model.Curseİnfos.Id">Delete</a>
+                                                <a class="btn btn-primary" asp-action="update" asp-controller="curseinfo" asp-area="chemistry-Vafa-admin" asp-route-id="@Model.Curseİnfos.Id">Update</a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        }
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

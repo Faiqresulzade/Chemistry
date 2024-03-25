@@ -1,0 +1,53 @@
+﻿@using Web.Areas.chemistry_Vafa_admin.ViewModels.VideoLesson
+@model VideoLessonIndexVM
+<div class="main-panel">
+    <div class="content-wrapper">
+        <div class="row">
+            <div class="col-lg-12 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">VideoLesson</h4>
+                        <a class="btn btn-main" asp-action="create" asp-controller="videolesson" asp-area="chemistry-Vafa-admin">Create VideoLesson</a>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Id</th>
+                                        <th>Title</th>
+                                        <th>Photo</th>
+                                        <th>Category</th>
+                                        <th>CreateAt</th>
+                                        <th>ModifiedAt</th>
+                                        <th>Ödənişlidir</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var videolesson in Model.VideoLesson)
+                                    {
+                                        <tr>
+                                            <td>@videolesson.Id</td>
+                                            <td>@videolesson.Title</td>
+                                            <td>
+                                                <img style="width:50px; height:70px" src="~/assets/media/@videolesson.Photo?" alt="lesson" />
+                                            </td>
+                                            <td>@videolesson.Category.CategoryTitle</td>
+                                            <td>@videolesson.CreateAt</td>
+                                            <td>@videolesson.ModifiedAt</td>
+                                            <td>@videolesson.İsPaid</td>
+                                            <td>
+                                                <a class="btn btn-danger" asp-action="GetDelete" asp-controller="videolesson" asp-area="chemistry-Vafa-admin" asp-route-id="@videolesson.Id">Delete</a>
+                                                <a class="btn btn-primary" asp-action="update" asp-controller="videolesson" asp-area="chemistry-Vafa-admin" asp-route-id="@videolesson.Id">Update</a>
+                                            </td>
+                                        </tr>
+
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,52 @@
+﻿@using Web.Areas.chemistry_Vafa_admin.ViewModels.HomeSlider
+@model HomeSliderIndexVM
+<div class="main-panel">
+    <div class="content-wrapper">
+        <div class="row">
+            <div class="col-lg-12 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Home Slider</h4>
+                        <a class="btn btn-main" asp-action="create" asp-controller="homeslider" asp-area="chemistry-Vafa-admin">Create Slider</a>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Id</th>
+                                        <th>Title</th>
+                                        <th>Description</th>
+                                        <th>Category</th>
+                                        <th>CreateAt</th>
+                                        <th>ModifiedAt</th>
+                                        <th>Photo</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var slider in Model.HomeSliders)
+                                    {
+                                        <tr>
+                                            <td>@slider.Id</td>
+                                            <td>@slider.Title</td>
+                                            <td>@slider.Description</td>
+                                            <td>@slider.Category</td>
+                                            <td>@slider.CreateAt</td>
+                                            <td>@slider.ModifiedAt</td>
+                                            <td>
+                                                <img style="width:50px; height:70px" src="~/assets/media/@slider.BackRoundImage?" alt="@slider.Title" />
+                                            </td>
+                                            <td>
+                                                <a class="btn btn-danger" asp-action="getDelete" asp-controller="homeslider" asp-area="chemistry-Vafa-admin" asp-route-id="@slider.Id">Delete</a>
+                                                <a class="btn btn-primary" asp-action="update" asp-controller="homeslider" asp-area="chemistry-Vafa-admin" asp-route-id="@slider.Id">Update</a>
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,298 @@
+﻿@using Web.ViewModels.Home
+@model HomeIndexVM
+
+@if (Model.MesageSended != null)
+{
+    <div id="Alert" style="z-index:11111;text-align:center" class="alert alert-success" role="alert">
+        Mesaj uğurla göndərildi
+    </div>
+
+    <style>
+        .main-section {
+            padding: 0 !important;
+        }
+    </style>
+}
+
+
+<div id="preloader"></div>
+<button class="backToTop" type="button">
+    <i class="fas fa-level-up-alt"></i>
+</button>
+<main class="main-section">
+    @if (Model.HomeSliders.Count != 0)
+    {
+        <section class="hero-slider">
+            <div class="container">
+                <div class="slider-area owl-carousel owl-theme">
+
+                    @{
+                        foreach (var slider in Model.HomeSliders)
+                        {
+                            <div class="item">
+                                <figure class="slider-image-area">
+                                    <img src="~/assets/media/@slider.BackRoundImage" alt="@slider.Category" class="imagae-slider">
+                                </figure>
+                                <div class="slider-content">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <article>
+                                                <div class="swiperCategory">
+                                                    <span> @slider.Category</span>
+                                                </div>
+                                                <h3 title="name">@slider.Title</h3>
+                                                <div class="clamp-content">
+                                                    <p>
+                                                        @slider.Description
+                                                    </p>
+                                                </div>
+                                            </article>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    }
+                </div>
+            </div>
+        </section>
+    }
+
+    @if (Model.GetPersonInfo != null)
+    {
+        <section id="about-us" class="aboutUs">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-lg-6">
+                        <div class="teacherImage">
+                            <img src="~/assets/media/@Model.GetPersonInfo.Photo" alt="@Model.GetPersonInfo.Title">
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <div class="infoTeacher">
+                            <h4 id="information" title="Vefa Kerimli">@Model.GetPersonInfo.Title</h4>
+                            <article>
+                                <p>
+                                    @Html.Raw(@Model.GetPersonInfo.Text)
+                                </p>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    }
+
+    @if (Model.Resources.Count != 0)
+    {
+        <section class="quizPage">
+            <div class="container">
+                <div class="row">
+
+                    @foreach (var resource in Model.Resources)
+                    {
+                        <div class="quiz-card col-xl-3  col-12 col-lg-3 col-md-6" data-name="MIQ">
+                            <div class="all-quiz">
+                                <div class="quiz">
+                                    <div class="quizImage">
+                                        <img src="~/assets/media/@resource.Image" alt="@resource.Title">
+                                    </div>
+                                    @*   @if (resource.I.İsPaid)
+                            {
+                            <span>Ödənişlidir</span>
+                            } *@
+                                    <article>
+                                        <h4 class="quizKind" title="quiz kind">@resource.Title</h4>
+                                        <div class="detailButton">
+
+                                            @if (resource.Pdf != null)
+                                            {
+                                                <a href="~/assets/media/@resource.Pdf" target="_blank">Ətraflı bax</a>
+                                            }
+                                            else
+                                            {
+                                                <a href="@resource.Link" target="_blank">Ətraflı bax</a>
+                                            }
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </section>
+
+
+        @* <section id="graduater" class="graduateSection">
+    <div class="container">
+    <article>
+    <h3 id="graduates" title="Mezunlarimiz">Materiallar</h3>
+    </article>
+    <div class="graduate-wrapper lessonPage owl-carousel owl-theme">
+    @foreach (var resorce in Model.Resources)
+    {
+
+    //buradir
+    <div class="lesson">
+    <div class="lessonImage">
+    <img src="~/assets/media/@resorce.Image" alt="@resorce.Title">
+    </div>
+
+    <article>
+    <h4 class="lessonKind" title="lesson kind">@resorce.Title</h4>
+    <div class="detailButton">
+    @if (resorce.Pdf != null)
+    {
+    <a href="~/assets/media/@resorce.Pdf" target="_blank">Ətraflı bax</a>
+    }
+    else
+    {
+    <a href="@resorce.Link" target="_blank">Ətraflı bax</a>
+    }
+    </div>
+    </article>
+
+    </div>
+    }
+    </div>
+    </div>
+    </section> *@
+    }
+
+    @if (@Model.Curseİnfo != null)
+    {
+        <section class="incrementSection">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-lg-3 col-md-6">
+                        <article>
+                            <p class="counter" title="Məzunlarımız" data-target="@Model.Curseİnfo.Graduates"><i class="fas fa-plus"></i></p>
+                            <!--! title hisse adminden gelecek -->
+                            <h4 title="">Məzunlarımız</h4>
+                        </article>
+                    </div>
+                    <div class="col-12 col-lg-3 col-md-6">
+                        <article>
+                            <p class="counter" title="Sınağlar" data-target="@Model.Curseİnfo.Test"> <i class="fas fa-plus"></i></p>
+                            <!--! title hisse adminden gelecek -->
+
+                            <h4 title="">Sınağlar</h4>
+                        </article>
+                    </div>
+                    <div class="col-12 col-lg-3 col-md-6">
+                        <article>
+                            <p class="counter" title="Video dərslər" data-target="@Model.Curseİnfo.VideoLesson"><i class="fas fa-plus"></i></p>
+                            <!--! title hisse adminden gelecek -->
+                            <h4 title="">Video dərslər</h4>
+                        </article>
+                    </div>
+                    <div class="col-12 col-lg-3 col-md-6">
+                        <article>
+                            <p class="counter" title="Təcrübə" data-target="@Model.Curseİnfo.Experience"><i class="fas fa-plus"></i></p>
+                            <!--! title hisse adminden gelecek -->
+                            <h4>Təcrübə</h4>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+    }
+
+    @if (Model.News.Count != 0)
+    {
+
+        <section id="news" class="newsSection">
+            <div class="container">
+                <div class="section-heading">
+                    <h2 title="news">Xəbərlər</h2>
+                </div>
+                <div class="row">
+                    @foreach (var news in Model.News)
+                    {
+                        <div class="col-12  col-lg-12 col-md-6">
+                            <div class="newsCard">
+                                <div class="row">
+                                    <div class="col-12 col-lg-3">
+                                        <div class="image">
+                                            <!-- !alt yazisi adminden gelecek -->
+                                            <img src="~/assets/media/@news.Photo" alt="@news.Title">
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-lg-9">
+                                        <ul>
+                                            <li>
+                                                <span class="category">@news.Category</span>
+                                                <!--! title hisse adminden gelecek -->
+                                                <h4 title="">@news.Title</h4>
+                                            </li>
+                                            <li>
+                                                <p>Date</p>
+                                                <h6>@news.CreateAt.ToShortDateString()/  @news.CreateAt.ToShortTimeString()</h6>
+                                            </li>
+                                        </ul>
+                                        <a asp-action="Details" asp-controller="news" asp-route-id="@news.Id">
+                                            <i class="fa fa-angle-right"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+                <div class="viewMore">
+                    <a asp-action="index" asp-controller="news">Daha Çox <i class="fas fa-chevron-right"></i></a>
+                </div>
+            </div>
+        </section>
+
+    }
+
+    <section id="contact-us" class="contact-us">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-6">
+                    <article class="content">
+                        <h6 id="contact-us" title="contact us">Əlaqə</h6>
+                        <h2 title="contact">Təklif və İradlarınızı bizə yazın</h2>
+                    </article>
+                </div>
+                <div class="col-12 col-lg-6">
+                    <div class="contactForm">
+                        <form method="post">
+                            <div asp-validation-summary="ModelOnly"></div>
+                            <div class="inputForm">
+                                <input asp-for="messageVM.Name" type="text" name="Name" placeholder="Adınız...">
+
+                            </div>
+                            <span style="color:red" asp-validation-for="messageVM.Name"></span>
+                            <div class="inputForm">
+                                <input asp-for="messageVM.Email" type="email" name="Email" placeholder="E-mail...">
+
+                            </div>
+                            <span style="color:red" asp-validation-for="messageVM.Email"></span>
+                            <div class="inputForm">
+                                <textarea asp-for="messageVM.Message" name="Message" placeholder="Mesajınız..."></textarea>
+
+                            </div>
+                            <span style="color:red" asp-validation-for="messageVM.Email"></span>
+                            <div class="inputForm">
+                                <button type="submit">
+                                    Mesajınızı
+                                    göndərin
+
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+
+
+
+
+

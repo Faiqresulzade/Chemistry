@@ -1,0 +1,43 @@
+﻿@using Web.Areas.chemistry_Vafa_admin.ViewModels.Resource
+@model ResourceCreateVM
+<div class="main-panel">
+    <div class="content-wrapper">
+        <div class="row">
+            <div class="col-md-12 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+
+                        <p class="card-description">
+                            Create Resource
+                        </p>
+                        <form enctype="multipart/form-data" method="post" asp-action="create" asp-controller="resource" asp-area="chemistry-Vafa-admin" class="forms-sample">
+                            <div class="form-group">
+                                <label asp-for="Title">Title</label>
+                                <input class="form-control" asp-for="Title">
+                                <span asp-validation-for="Title"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Link">Link</label>
+                                <input class="form-control" asp-for="Link"/>
+                                <span asp-validation-for="Link"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Image">Photo</label>
+                                <input class="form-control" asp-for="Image">
+                                <span asp-validation-for="Image"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Pdf">Pdf</label>
+                                <input class="form-control" asp-for="Pdf">
+                                <span asp-validation-for="Pdf"></span>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary me-2">Submit</button>
+                            <a class="btn btn-light" href="./">Cancel</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

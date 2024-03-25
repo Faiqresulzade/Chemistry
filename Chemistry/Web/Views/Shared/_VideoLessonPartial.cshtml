@@ -1,0 +1,24 @@
+﻿@using Core.Entities
+@model List<VideoLessonCategory>
+
+@foreach (var lessonCategory in Model)
+{
+    @foreach (var lesson in lessonCategory.VideoLessons)
+    {
+        <div class="all-lesson col-4 col-lg-4 col-md-6 col-s-12 col-xs-12">
+            <div class="lesson @lessonCategory.CategoryTitle.ToLower()">
+                <div class="lessonImage">
+                    <img src="~/assets/media/@lesson.Photo" alt="">
+                </div>
+                <article>
+                    <h4 class="lessonKind">Web development</h4>
+                    <div class="detailButton">
+                        <a target="_blank" asp-action="details" asp-controller="videolesson" asp-route-id="@lesson.Id">Ətraflı bax</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    }
+}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ajaxy/1.6.1/scripts/jquery.ajaxy.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ajaxy/1.6.1/scripts/jquery.ajaxy.js"></script>

@@ -1,0 +1,103 @@
+﻿@{
+    Layout = null;
+    var returnUrl = Context.Request.Query["returnurl"];
+}
+@using Web.ViewModels.Account
+@model AccountLoginVM
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="aA_wxrUo2JbeY1xX594i5IJzvD6_ffztc3gAIcTd9Fg" />
+    <title>Daxil ol</title>
+    <script src="https://kit.fontawesome.com/3578d1d38b.js" crossorigin="anonymous"></script>
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/assets/style/css/style.css">
+</head>
+
+<body>
+    <div class="login">
+        <div class="container">
+            <div class="wrap-login">
+                <div class="row">
+                    <div class="col-12 col-lg-8 col-md-7">
+                        <div class="login-picture">
+                            <img src="~/assets/media/chemistryset_dribbble.gif" alt="Login">
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-4 col-md-5">
+                        <form method="post" asp-controller="Account" asp-action="login" class="login-form validate-form">
+                            <input asp-for="ReturnUrl" type="hidden" value="@returnUrl" />
+                            <div asp-validation-summary="ModelOnly"></div>
+                            <h4 class="login-form-title">Üzv girişi</h4>
+                            <div class="validation-input">
+                                <div class="wrap-input validate-input">
+                                    <input asp-for="Email" class="input" type="email" name="email" id="email" placeholder="Email hesabınız..">
+                                    <span class="focus-input"></span>
+                                    <span class="symbol-input">
+                                        <i class="fa fa-envelope"></i>
+                                    </span>
+                                </div>
+                                <span class="error-login email-login-error">
+                                    <i class="bx bx-error-circle error-icon"></i>
+                                    <p class="error-text">Please enter a valid email</p>
+                                </span>
+                            </div>
+                            <div class="validation-input">
+                                <div class="wrap-input validate-input">
+                                    <input asp-for="PassWord" class="input" id="password" type="password" name="password"
+                                           placeholder="Şifrəniz">
+                                    <span class="focus-input"></span>
+                                    <span class="symbol-input">
+                                        <i class="fa fa-lock"></i>
+                                    </span>
+                                    <i class="bx bx-hide show-hide"></i>
+                                </div>
+                                <span class="error-login password-login-error">
+                                    <i class="bx bx-error-circle error-icon"></i>
+                                    <p class="error-text">Please enter a password</p>
+                                </span>
+
+                            </div>
+                            @if (Model != null&&Model.Errors.TryGetValue(1, out string error))
+                            {
+                                <b style="color:red">@error</b>
+                            }
+                            <div class="login-form-btn">
+                                <button type="submit" class="login-button">Daxil ol</button>
+                            </div>
+                        </form>
+                        <div class="extra-link">
+                            <a asp-action="forgotpassword" asp-controller="account">Şifrənizi unutmusunuz?</a>
+                        </div>
+                        <div class="create-account">
+                            <a asp-action="register" asp-controller="account">
+                               Hesab Yaradın
+                                <i class="fa fa-long-arrow-right "></i>
+                            </a>
+                        </div>
+                        <div class="home-page">
+                            <a asp-action="index" asp-controller="Home">
+                                Əsas Səhifə
+                                <i class="fa fa-long-arrow-right "></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="~/javascript/jquery.js"></script>
+    <script src="~/javascript/bootstrap.bundle.min.js"></script>
+    <script src="~/javascript/toaster.min.js"></script>
+    <script src="~/javascript/bootstrap.min.js"></script>
+    <script src="~/javascript/fontawesome.js"></script>
+    <script src="~/javascript/logregister.js"></script>
+</body>
+
+</html>

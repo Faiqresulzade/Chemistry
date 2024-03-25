@@ -1,0 +1,75 @@
+﻿@using Web.Areas.chemistry_Vafa_admin.ViewModels.Quiz
+@model QuizUpdateVM
+<div class="main-panel">
+    <div class="content-wrapper">
+        <div class="row">
+            <div class="col-md-12 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+
+                        <p class="card-description">
+                            Create Quiz
+                        </p>
+                        <form enctype="multipart/form-data" method="post" asp-action="update" asp-controller="quiz" asp-area="chemistry-Vafa-admin" class="forms-sample">
+                            <div asp-validation-summary="ModelOnly"></div>
+                            <div class="form-group">
+                                <label asp-for="QuizTitle">QuizTitle</label>
+                                <input class="form-control" asp-for="QuizTitle">
+                                <span asp-validation-for="QuizTitle"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="QuizImage">Quiz Image</label>
+                                <input class="form-control" asp-for="QuizImage">
+                                <span asp-validation-for="QuizImage"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="VariantA">VariantA</label>
+                                <input class="form-control" asp-for="VariantA">
+                                <span asp-validation-for="VariantA"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="VariantB">VariantB</label>
+                                <input class="form-control" asp-for="VariantB">
+                                <span asp-validation-for="VariantB"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="VariantC">VariantC</label>
+                                <input class="form-control" asp-for="VariantC">
+                                <span asp-validation-for="VariantC"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="VariantD">VariantD</label>
+                                <input class="form-control" asp-for="VariantD">
+                                <span asp-validation-for="VariantD"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="VariantE">VariantE</label>
+                                <input class="form-control" asp-for="VariantE">
+                                <span asp-validation-for="VariantE"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="CorrectVariant">CorrectVariant</label>
+                                <input class="form-control" asp-for="CorrectVariant">
+                                <span asp-validation-for="CorrectVariant"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="QuizCategoryId"></label>
+                                <select class="form-select" asp-for="QuizCategoryId" asp-items="Model.Categories"></select>
+                                <span asp-validation-for="QuizCategoryId"></span>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-check-label" asp-for="IsPaid"></label>
+                                <input style="transform:scale(2);margin-left:10px" type="checkbox" asp-for="IsPaid" />
+                                <span asp-validation-for="IsPaid"></span>
+                            </div>
+                            <button type="submit" class="btn btn-primary me-2">Submit</button>
+                            <a class="btn btn-light" href="./">Cancel</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

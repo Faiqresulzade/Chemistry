@@ -1,0 +1,131 @@
+﻿@using Web.ViewModels.Account
+@model AccountRegisterVM
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="aA_wxrUo2JbeY1xX594i5IJzvD6_ffztc3gAIcTd9Fg" />
+
+    <title>Qeydiyyat</title>
+   <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="~/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="~/assets/style/css/style.css">
+</head>
+
+<body>
+    <div class="register">
+        <div class="container">
+            <div class="wrap-register">
+                <div class="row">
+                    <div class="col-12 col-lg-6">
+                        <div class="register-picture">
+                            <img src="~/assets/media/chemistryset_dribbble.gif" alt="Register">
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6 col-md-10">
+                        <form class="register-form validate-form" method="post">
+                            @* <div style="color:red" asp-validation-summary="All" ></div> *@
+                            <h4 class="register-form-title">Qeydiyyat</h4>
+
+                            <div class="validation-input">
+                                <div class="wrap-input validate-input">
+                                    <input asp-for="Name" class="input" type="text" name="name" id="name"
+                                           placeholder="Ad">
+                                    <span class="focus-input"></span>
+                                    <span class="symbol-input">
+                                        <i class="fa-solid fa-user-plus"></i>
+                                    </span>
+                                </div>
+                                <span style="color:red" asp-validation-for="Name"></span>
+                                <br>
+                            </div>
+                            <div class="validation-input">
+                                <div class="wrap-input validate-input">
+                                    <input asp-for="surName" class="input" type="text"  name="surname" id="surname"
+                                        placeholder="Soyad">
+                                    <span class="focus-input"></span>
+                                    <span class="symbol-input">
+                                        <i class="fa-solid fa-user-plus"></i>
+                                    </span>
+                                </div>
+                                <span style="color:red" asp-validation-for="surName"></span>
+                                <br>
+                            </div>
+                            <div class="validation-input  email-field">
+                                <div class="wrap-input validate-input">
+                                    <input asp-for="Email" class="input" type="email" name="email" id="email"
+                                        placeholder="Email daxil edin">
+                                    <span class="focus-input"></span>
+                                    <span class="symbol-input">
+                                        <i class="fa fa-envelope"></i>
+                                    </span>
+                                </div>
+                                <span style="color:red" asp-validation-for="Email"></span>
+                                <br>
+                            </div>
+                            <div class="validation-input ">
+                                <div class="wrap-input validate-input">
+                                    <input asp-for="PassWord" class="input" id="password" type="password" name="password"
+                                        placeholder="Şifrənizi qeyd edin">
+                                    <span class="focus-input"></span>
+                                    <span class="symbol-input">
+                                        <i class="fa fa-lock"></i>
+                                    </span>
+                                    <i class="bx bx-hide show-hide"></i>
+                                </div>
+                                <span style="color:red" asp-validation-for="PassWord"></span>
+                                <br>
+                            </div>
+                            <div class="validation-input">
+                                <div class="wrap-input validate-input">
+                                    <input asp-for="ConfirmPassWord" class="input cpassword" id="cpassword" type="password" name="confirmPassword"
+                                        placeholder="Şifrənizi təsdiq edin">
+                                    <span class="focus-input"></span>
+                                    <span class="symbol-input">
+                                        <i class="fa-solid fa-key"></i>
+                                    </span>
+                                    <i class="bx bx-hide show-hide"></i>
+                                </div>
+                                <span style="color:red" asp-validation-for="ConfirmPassWord"></span>
+                                <br>
+                            </div>
+                            <div class="register-form-btn">
+                                <button  type="submit" class="register-button">Qeydiyyat</button>
+                            </div>
+                        </form>
+
+                        <div class="get-login">
+                            <a asp-action="login" asp-controller="account">
+                              Üzv Girişi
+                                <i class="fa fa-long-arrow-right "></i>
+                            </a>
+                        </div>
+                        <div class="home-page">
+                            <a asp-action="index" asp-controller="Home">
+                               Əsas Səhifə
+                                <i class="fa fa-long-arrow-right "></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="~/javascript/jquery.js"></script>
+    <script src="~/javascript/bootstrap.bundle.min.js"></script>
+    <script src="~/javascript/bootstrap.min.js"></script>
+    <script src="~/javascript/fontawesome.js"></script>
+    <script src="~/javascript/owl.carousel.min.js"></script>
+    <script src="~/javascript/register.js"></script>
+</body>
+
+</html>

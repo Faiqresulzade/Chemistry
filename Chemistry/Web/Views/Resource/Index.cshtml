@@ -1,0 +1,114 @@
+﻿@* @using Core.Entities;
+@model List<Resource>
+
+<div id="preloader"></div>
+<button class="backToTop" type="button">
+    <i class="fas fa-level-up-alt"></i>
+</button>
+<main class="main-section">
+    <div class="allPageHeader">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="newsContent">
+                        <h1 title="Materiallar">Materiallar</h1>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <section id="news" class="newsSection newsView">
+        <div class="container">
+            <div class="row">
+
+                @foreach (var resorce in Model)
+                {
+                    <div class="quiz-card col-12 col-lg-4 col-md-6" data-name="MIQ">
+                        <div class="all-quiz">
+                            <div class="quiz">
+                                <div class="lesson">
+                                    <div class="lessonImage">
+                                        <img src="~/assets/media/@resorce.Image" alt="@resorce.Title">
+                                    </div>
+
+                                    <article>
+                                        <h4 class="lessonKind" title="lesson kind">@resorce.Title</h4>
+                                        <div class="detailButton">
+                                            @if (resorce.Pdf != null)
+                                            {
+                                                <a href="~/assets/media/@resorce.Pdf" target="_blank">Ətraflı bax</a>
+                                            }
+                                            else
+                                            {
+                                                <a href="@resorce.Link" target="_blank">Ətraflı bax</a>
+                                            }
+                                        </div>
+                                    </article>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </section>
+</main> *@
+
+
+
+@using Core.Entities;
+@model List<Resource>
+
+
+<main class="main-section">
+    <section class="allPageHeader">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="newsContent">
+                        <h1 title="Sınaqlar">Sınaq</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="quizPage">
+        <div class="container">
+            <div class="row">
+
+                @foreach (var resource in Model)
+                {
+                    <div class="quiz-card col-12 col-lg-4 col-md-6" data-name="MIQ">
+                        <div class="all-quiz">
+                            <div class="quiz">
+                                <div class="quizImage">
+                                    <img src="~/assets/media/@resource.Image" alt="@resource.Title">
+                                </div>
+                                @*   @if (resource.I.İsPaid)
+                            {
+                            <span>Ödənişlidir</span>
+                            } *@
+                                <article>
+                                    <h4 class="quizKind" title="quiz kind">@resource.Title</h4>
+                                    <div class="detailButton">
+
+                                        @if (resource.Pdf != null)
+                                        {
+                                            <a href="~/assets/media/@resource.Pdf" target="_blank">Ətraflı bax</a>
+                                        }
+                                        else
+                                        {
+                                            <a href="@resource.Link" target="_blank">Ətraflı bax</a>
+                                        }
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </section>
+</main>

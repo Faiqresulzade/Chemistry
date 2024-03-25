@@ -1,0 +1,47 @@
+﻿@using Web.ViewModels.QuizCategory
+@model QuizCategoryIndexVM
+
+
+<main class="main-section">
+    <section class="allPageHeader">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="newsContent">
+                        <h1 title="Sınaqlar">Sınaq</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="quizPage">
+        <div class="container">
+            <div class="row">
+
+                @foreach (var quizCategory in Model.QuizCategories)
+                {
+                    <div class="quiz-card col-12 col-lg-4 col-md-6" data-name="MIQ">
+                        <div class="all-quiz">
+                            <div class="quiz">
+                                <div class="quizImage">
+                                    <img src="~/assets/media/@quizCategory.Photo" alt="@quizCategory.Name">
+                                </div>
+                                @if (quizCategory.İsPaid)
+                                {
+                                    <span>Ödənişlidir</span>
+                                }
+                                <article>
+                                    <h4 class="quizKind" title="quiz kind">@quizCategory.Name</h4>
+                                    <div class="detailButton">
+
+                                        <a asp-action="Index" asp-controller="Quiz" asp-route-id="@quizCategory.Id" target="_blank">Ətraflı bax</a>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </section>
+</main>

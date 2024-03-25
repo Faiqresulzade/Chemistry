@@ -1,0 +1,56 @@
+﻿@using Web.Areas.chemistry_Vafa_admin.ViewModels.Resource
+@model ResourceIndexVM
+<div class="main-panel">
+    <div class="content-wrapper">
+        <div class="row">
+            <div class="col-lg-12 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Resources</h4>
+                        <a class="btn btn-main" asp-action="create" asp-controller="resource" asp-area="chemistry-Vafa-admin">Create Resource</a>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Id</th>
+                                        <th>Title</th>
+                                        <th>Link</th>
+                                        <th>Photo</th>
+                                        <th>Pdf</th>
+                                        <th>CreateAt</th>
+                                        <th>ModifiedAt</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var resource in Model.Resources)
+                                    {
+                                        <tr>
+                                            <td>@resource.Id</td>
+                                            <td>@resource.Title</td>
+                                            <td>@resource.Link</td>
+                                            <td>
+                                                <img style="width:50px; height:70px" src="~/assets/media/@resource.Image?" alt="resourceImage" />
+                                            </td>
+                                            <td>
+                                                <embed src="~/assets/media/@resource.Pdf" style="width:100%;" frameborder="0" />
+                                            </td>
+
+                                            <td>@resource.CreateAt.ToShortDateString()/  @resource.CreateAt.ToShortTimeString()</td>
+                                            <td>@resource.ModifiedAt.ToShortDateString()/  @resource.ModifiedAt.ToShortTimeString()</td>
+                                            <td>
+                                                <a class="btn btn-danger" asp-action="GetDelete" asp-controller="resource" asp-area="chemistry-Vafa-admin" asp-route-id="@resource.Id">Delete</a>
+                                                <a class="btn btn-primary" asp-action="update" asp-controller="resource" asp-area="chemistry-Vafa-admin" asp-route-id="@resource.Id">Update</a>
+                                            </td>
+                                        </tr>
+
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

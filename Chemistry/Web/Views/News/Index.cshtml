@@ -1,0 +1,57 @@
+﻿@using Web.ViewModels.News
+@model NewsIndexVM
+
+<div id="preloader"></div>
+<button class="backToTop" type="button">
+    <i class="fas fa-level-up-alt"></i>
+</button>
+<main class="main-section">
+    <div class="allPageHeader">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="newsContent">
+                        <h1 title="Xəbərlər">Xəbərlər</h1>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <section id="news" class="newsSection newsView">
+        <div class="container">
+            <div class="row">
+
+                @foreach (var news in Model.News)
+                {
+                    <div class="col-12 col-lg-12 col-md-6">
+                        <div class="newsCard">
+                            <div class="row">
+                                <div class="col-12 col-lg-3">
+                                    <div class="image">
+                                        <img src="~/assets/media/@news.Photo" alt="@news.Title">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-9">
+                                    <ul>
+                                        <li>
+                                            <span class="category">@news.Category</span>
+                                            <h4>@news.Title</h4>
+                                        </li>
+                                        <li>
+                                            <p>Date</p>
+                                            <h6>@news.CreateAt.ToShortDateString()/  @news.CreateAt.ToShortTimeString()</h6>
+                                        </li>
+                                    </ul>
+                                    <a asp-action="Details" asp-controller="news" asp-route-id="@news.Id">
+                                        <i class="fa fa-angle-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </section>
+</main>

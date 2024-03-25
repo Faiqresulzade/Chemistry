@@ -1,0 +1,42 @@
+﻿@using Web.Areas.chemistry_Vafa_admin.ViewModels.CurseInfo
+@model CurseInfoCreateVM
+<div class="main-panel">
+    <div class="content-wrapper">
+        <div class="row">
+            <div class="col-md-12 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+
+                        <p class="card-description">
+                            Create Curse Info
+                        </p>
+                        <form enctype="multipart/form-data" method="post" asp-action="create" asp-controller="curseinfo" asp-area="chemistry-Vafa-admin" class="forms-sample">
+                            <div class="form-group">
+                                <label asp-for="CurseInfos.Graduates">Graduates</label>
+                                <input class="form-control" asp-for="CurseInfos.Graduates">
+                                <span asp-validation-for="CurseInfos.Graduates"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="CurseInfos.VideoLesson">Video Lesson</label>
+                                <input class="form-control" asp-for="CurseInfos.VideoLesson">
+                                <span asp-validation-for="CurseInfos.VideoLesson"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="CurseInfos.Test">Test</label>
+                                <input class="form-control" asp-for="CurseInfos.Test">
+                                <span asp-validation-for="CurseInfos.Test"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="CurseInfos.Experience">Experience</label>
+                                <input class="form-control" asp-for="CurseInfos.Experience">
+                                <span asp-validation-for="CurseInfos.Experience"></span>
+                            </div>
+                            <button type="submit" class="btn btn-primary me-2">Submit</button>
+                            <a class="btn btn-light" href="./">Cancel</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

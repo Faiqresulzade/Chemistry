@@ -1,0 +1,46 @@
+﻿@using Core.Entities
+@model Quiz
+<div class="main-panel">
+    <div class="content-wrapper">
+        <div class="row">
+            <div class="col-lg-12 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Quiz</h4>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Id</th>
+                                        <th>Title</th>
+                                        <th>Category</th>
+                                        <th>Correct Variant</th>
+                                        <th>Variant A</th>
+                                        <th>Variant B</th>
+                                        <th>Variant C</th>
+                                        <th>Variant D</th>
+                                        <th>Variant E</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>@Model.Id</td>
+                                        <td>@Model.QuizTitle</td>
+                                        <td>@Model.QuizCategory.Name</td>
+                                        <td>@Model.CorrectVariant</td>
+                                        <td>@Model.VariantA</td>
+                                        <td>@Model.VariantB</td>
+                                        <td>@Model.VariantC</td>
+                                        <td>@Model.VariantD</td>
+                                        <td>@Model.VariantE</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <a class="btn btn-light" href="../">Cancel</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

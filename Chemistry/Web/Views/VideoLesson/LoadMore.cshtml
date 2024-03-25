@@ -1,0 +1,74 @@
+﻿@using Web.ViewModels.VideoLesson
+@model List<VideoLessonIndexVM>
+
+<div id="preloader"></div>
+<button class="backToTop" type="button">
+    <i class="fas fa-level-up-alt"></i>
+</button>
+
+<main class="main-section">
+    <section class="allPageHeader">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="newsContent">
+                        <h1 title="Dərslər">Dərslər</h1>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section class="lessonPage">
+        <div class="container">
+            <div class="filterLesson">
+                <p class="my-list">
+
+                    @foreach (var lessonCategory in Model)
+                    {
+                        foreach (var item in lessonCategory.videoLessonCategories)
+                        {
+
+                            <button  data-filter="@item.ToUpper()">@item.ToUpper()</button>
+
+                        }
+                        break;
+                    }
+                </p>
+            </div>
+            <div class="row">
+
+
+                @foreach (var videolessoncategory in Model)
+                {
+                    <div class="all-lesson col-12 col-lg-4 col-md-6" data-name="@videolessoncategory.CategoryTitle.ToUpper()">
+                        <div class="lesson">
+                            <div class="lessonImage">
+                                <img src="~/assets/media/@videolessoncategory.ImageUrl" alt="">
+                            </div>
+                            <article>
+                                <h4 class="lessonKind" title="lesson kind">@videolessoncategory.Title</h4>
+                                <div class="detailButton">
+                                    <a href="quiz.html" target="_blank">Ətraflı bax</a>
+                                </div>
+                            </article>
+
+                        </div>
+
+                    </div>
+                }
+
+            </div>
+            <div class="loadMore">
+                <a id="LoadMore" asp-action="LoadMore" asp-controller="VideoLesson">Load more </a>
+            </div>
+        </div>
+    </section>
+</main>
+
+<script src="~/javascript/jquery.js"></script>
+<script src="~/javascript/bootstrap.bundle.min.js"></script>
+<script src="~/javascript/bootstrap.min.js"></script>
+<script src="~/javascript/fontawesome.js"></script>
+<script src="~/javascript/owl.carousel.min.js"></script>
+<script src="~/javascript/script.js"></script>

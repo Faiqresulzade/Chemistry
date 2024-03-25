@@ -1,0 +1,124 @@
+﻿@using Core.Entities
+@using Web.ViewModels.Quiz
+@model QuizIndexVM
+@{
+    int count = 1;
+    Layout = null;
+}
+<div class="test">
+    <div class="container">
+
+
+        <h1>@Model.Quizzes[0].QuizCategory.Name</h1>
+
+        @if (Model.IsFinished)
+        {
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Düzgün cavab</th>
+                        <th scope="col">Səhv cavab</th>
+                        <th scope="col">Cavablanmadı</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Say</th>
+                        <td>@Model.CorrectCount</td>
+                        <td>@Model.WrongCount</td>
+                        <td>
+                            @{
+                                @(Model.Quizzes.Count - Model.CorrectCount - Model.WrongCount)
+                                ;
+                            }
+
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        }
+
+
+        <div class="row">
+            <div class="col-12 col-lg-12 col-md-12 col-s-12  col-xs-12">
+                <div class="all_question">
+                    <form enctype="application/x-www-form-urlencoded" method="post" asp-route-id="@Model.Quizzes[0].QuizCategoryId" asp-action="index" asp-controller="quiz" class="forms-sample">
+
+                        @foreach (var quiz in Model.Quizzes)
+                        {
+                            <div class="question_form">
+                                <div class="question-title">
+                                    <h3>@(count++).</h3>
+                                    <h3>
+                                        @quiz.QuizTitle
+                                    </h3>
+                                </div>
+                                @if (!string.IsNullOrEmpty(quiz.QuizImage))
+                                {
+                                    <div class="question-image">
+                                        <img src="~/assets/media/@quiz.QuizImage">
+                                    </div>
+                                }
+                                <div class="question_content">
+                                    <div class="question_answers">
+                                        <i>A.</i>
+                                        <input type="radio" name="Answers[@quiz.Id]" value="A" id="A-@quiz.Id">
+                                        <label for="A-@quiz.Id">@quiz.VariantA</label>
+                                    </div>
+
+                                    <div class="question_answers">
+                                        <i>B.</i>
+                                        <input type="radio" name="Answers[@quiz.Id]" value="B" id="A-@quiz.Id">
+                                        <label for="B-@quiz.Id">@quiz.VariantB</label>
+                                    </div>
+
+                                    <div class="question_answers">
+                                        <i>C.</i>
+                                        <input type="radio" name="Answers[@quiz.Id]" value="C" id="A-@quiz.Id">
+                                        <label for="C-@quiz.Id">@quiz.VariantC</label>
+                                    </div>
+
+                                    <div class="question_answers">
+                                        <i>D.</i>
+                                        <input type="radio" name="Answers[@quiz.Id]" value="D" id="A-@quiz.Id">
+                                        <label for="D-@quiz.Id">@quiz.VariantD</label>
+
+                                    </div>
+
+                                    <div class="question_answers">
+                                        <i>E.</i>
+                                        <input type="radio" name="Answers[@quiz.Id]" value="E" id="A-@quiz.Id">
+                                        <label for="E-@quiz.Id">@quiz.VariantE</label>
+
+                                    </div>
+
+                                    @if (Model.Errors.TryGetValue(quiz.Id, out string error))
+                                    {
+                                        <b>@error</b>
+                                    }
+                                    <br>
+                                    @if (@quiz.QuizDescription != null)
+                                    {
+                                        <a href="@quiz.QuizDescription">İzah</a>
+                                    }
+
+                                </div>
+                            </div>
+                        }
+
+
+                        <div class="question-button">
+                            <button type="submit">
+                                Tesdiqle
+                            </button>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<link rel="stylesheet" href="~/assets/style/css/style.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">

@@ -1,0 +1,38 @@
+﻿@using Core.Entities
+@model News
+
+
+<main class="main-section">
+    <div class="allPageHeader">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="newsContent">
+                        <h1>@Model.Title</h1>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="newsDetail">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-10">
+                    <div class="newsImage">
+                        <img src="~/assets/media/@Model.Photo" alt="news-image">
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="news-description ">
+                        <p>
+                         @Html.Raw(@Model.Info)
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    </div>
+</main>
